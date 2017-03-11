@@ -1,0 +1,742 @@
+{
+  "version": 1,
+  "width": 105,
+  "height": 23,
+  "duration": 31.332820,
+  "command": "/bin/zsh",
+  "title": "",
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.127771,
+      "\u001b]7;file://dmxmbp/Users/dmx/Documents/test/asciinema_videos\u0007"
+    ],
+    [
+      0.316100,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                        \r \r"
+    ],
+    [
+      0.046777,
+      "\r\n\u001b[31mdmx\u001b[39m@\u001b[34mdmxmbp\u001b[39m:\u001b[34m~/Documents/test/asciinema_videos \u001b[90m \u001b[39m\r\n"
+    ],
+    [
+      0.002690,
+      "\u001b]7;file://dmxmbp/Users/dmx/Documents/test/asciinema_videos\u0007"
+    ],
+    [
+      0.023336,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m\u003e\u001b[39m "
+    ],
+    [
+      0.000010,
+      "\u001b[K"
+    ],
+    [
+      0.000120,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.653403,
+      "l"
+    ],
+    [
+      0.143910,
+      "\u0008ls"
+    ],
+    [
+      0.214759,
+      " "
+    ],
+    [
+      0.424042,
+      "-"
+    ],
+    [
+      0.375160,
+      "\u0007"
+    ],
+    [
+      0.000106,
+      "\r\r\n"
+    ],
+    [
+      0.000160,
+      "\u001b[00m-1  -- single column output\r\n-A  -- list all except . and ..\r\n-B  -- print octal escapes for control characters\r\n-C  -- list entries in columns sorted vertically\r\n-F  -- append file type indicators\r\n-H  -- follow symlinks on the command line\r\n-L  -- list referenced file for sym link\r\n-P  -- do not follow symlinks\r\n-R  -- list subdirectories recursively\r\n-S  -- sort by size\r\n-T  -- show complete time information\r\n-a  -- list entries starting with .\r\n-b  -- as -B, but use C escape codes whenever possible\r\n-c  -- status change time\r\n-d  -- list directory entries instead of contents\r\n-f  -- output is not sorted\r\n-g  -- long listing but without owner information\r\n-h  -- print sizes in human readable form\r\n-i  -- print file inode numbers\r\n-k  -- print sizes of 1k\r\n-l  -- long listing\r\n\u001b[J-m  -- comma separated\u001b[J\r\n-n  -- numeric uid, gid\u001b[J\r\n-o  -- display file flags\u001b[J\r\n-p  -- append file type indicators for directory\u001b[J\r\n-q  -- hide control chars\u001b[J\r\n-r  -- reverse sort order\u001b[J\r\n-s  -- display size of each "
+    ],
+    [
+      0.001170,
+      "file in blocks\u001b[J\r\n-t  -- so"
+    ],
+    [
+      0.000022,
+      "rt by modification time\u001b[J\r\n-u  -- access time\u001b[J\r\n-w  -- print raw characters\u001b[J\r\n-x  -- sort horizontally\u001b[J\r\n\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m\u003e\u001b[39m ls -\u001b[K"
+    ],
+    [
+      0.484428,
+      "1"
+    ],
+    [
+      0.000071,
+      "\r\r\n"
+    ],
+    [
+      0.000292,
+      "\u001b[7m-1  -- single column output\u001b[K\u001b[00m\u001b[K\r\n-A  -- list all except . and ..\u001b[K\u001b[K\r\n-B  -- print octal escapes for control characters\u001b[K\u001b[K\r\n-C  -- list entries in columns sorted vertically\u001b[K\u001b[K\r\n-F  -- append file type indicators\u001b[K\u001b[K\r\n-H  -- follow symlinks on the command line\u001b[K\u001b[K\r\n-L  -- list referenced file for sym link\u001b[K\u001b[K\r\n-P  -- do not follow symlinks\u001b[K\u001b[K\r\n-R  -- list subdirectories recursively\u001b[K\u001b[K\r\n-S  -- sort by size\u001b[K\u001b[K\r\n-T  -- show complete time information\u001b[K\u001b[K\r\n-a  -- list entries starting with .\u001b[K\u001b[K\r\n-b  -- as -B, but use C escape codes whenever possible\u001b[K\u001b[K\r\n-c  -- status change time\u001b[K\u001b[K\r\n-d  -- list directory entries instead of contents\u001b[K\u001b[K\r\n-f  -- output is not sorted\u001b[K\u001b[K\r\n-g  -- long listing but without owner information\u001b[K\u001b[K\r\n-h  -- print sizes in human readable form\u001b[K\u001b[K\r\n-i  -- print file inode numbers\u001b[K\u001b[K\r\n-k  -- print sizes of 1k\u001b[K\u001b[K\r\n-l  -- long listing\u001b[K\u001b[K\r\n\u001b[J-m  -- comma separated\u001b[K\u001b[J\u001b[J\u001b[22A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000014,
+      "ls -1\u001b[K\u001b[39m"
+    ],
+    [
+      0.144663,
+      "\r\r\n"
+    ],
+    [
+      0.000084,
+      "\u001b[7m-1  -- single column output\u001b[K\u001b[00m\r\u001b[7m-1  -- single column output\u001b[K\u001b[00m\r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000018,
+      "ls -1\u001b[K\u001b[39m"
+    ],
+    [
+      0.000033,
+      "\u0008A"
+    ],
+    [
+      0.000091,
+      "\r\r\n"
+    ],
+    [
+      0.000078,
+      "\u001b[00m-1  -- single column output\u001b[K\r\u001b[1B\u001b[7m-A  -- list all except . and ..\u001b[K\u001b[00m\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Cls -A\u001b[K\u001b[39m"
+    ],
+    [
+      0.271617,
+      "\u0008B"
+    ],
+    [
+      0.000108,
+      "\r\r\n"
+    ],
+    [
+      0.000075,
+      "\u001b[1B\u001b[00m-A  -- list all except . and ..\u001b[K\r\u001b[1B\u001b[7m-B  -- print octal escapes for control characters\u001b[K\u001b[00m\r\u001b[3A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000005,
+      "ls -B\u001b[K\u001b[39m"
+    ],
+    [
+      0.167886,
+      "\u0008C"
+    ],
+    [
+      0.000115,
+      "\r\r\n"
+    ],
+    [
+      0.000069,
+      "\u001b[2B\u001b[00m-B  -- print octal escapes for control characters\u001b[K\r\u001b[1B\u001b[7m-C  -- list entries in columns sorted vertically\u001b[K\u001b[00m\r\u001b[4A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000335,
+      "ls -C\u001b[K\u001b[39m"
+    ],
+    [
+      1.455363,
+      "\r\r\n\u001b[J\u001b[A\u001b[7C\u001b[1m \u001b[0m"
+    ],
+    [
+      0.000118,
+      "\u0007"
+    ],
+    [
+      0.751986,
+      "\u0008\u001b[0m \u0008"
+    ],
+    [
+      0.000026,
+      "\u001b[?1l\u001b\u003e"
+    ],
+    [
+      0.000075,
+      "\r\r\n\u001b[J"
+    ],
+    [
+      0.009759,
+      "\u001b[1m\u001b[36mtestDir\u001b[39;49m\u001b[0m                    zsh-cd-expand-example.json\r\n"
+    ],
+    [
+      0.000428,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                        \r \r"
+    ],
+    [
+      0.032864,
+      "\r\n\u001b[31mdmx\u001b[39m@\u001b[34mdmxmbp\u001b[39m:\u001b[34m~/Documents/test/asciinema_videos \u001b[90m \u001b[39m\r\n"
+    ],
+    [
+      0.002600,
+      "\u001b]7;file://dmxmbp/Users/dmx/Documents/test/asciinema_videos\u0007"
+    ],
+    [
+      0.023288,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m\u003e\u001b[39m \u001b[K"
+    ],
+    [
+      0.000072,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.916783,
+      "l"
+    ],
+    [
+      0.183944,
+      "\u0008ls"
+    ],
+    [
+      1.656159,
+      " "
+    ],
+    [
+      0.327122,
+      "-"
+    ],
+    [
+      0.290406,
+      "\u0007"
+    ],
+    [
+      0.000068,
+      "\r\r\n"
+    ],
+    [
+      0.000142,
+      "\u001b[00m-1  -- single column output\r\n-A  -- list all except . and ..\r\n-B  -- print octal escapes for control characters\r\n-C  -- list entries in columns sorted vertically\r\n-F  -- append file type indicators\r\n-H  -- follow symlinks on the command line\r\n-L  -- list referenced file for sym link\r\n-P  -- do not follow symlinks\r\n-R  -- list subdirectories recursively\r\n-S  -- sort by size\r\n-T  -- show complete time information\r\n-a  -- list entries starting with .\r\n-b  -- as -B, but use C escape codes whenever possible\r\n-c  -- status change time\r\n-d  -- list directory entries instead of contents\r\n-f  -- output is not sorted\r\n-g  -- long listing but without owner information\r\n-h  -- print sizes in human readable form\r\n-i  -- print file inode numbers\r\n-k  -- print sizes of 1k\r\n-l  -- long listing\r\n\u001b[J-m  -- comma separated\u001b[J\r\n-n  -- numeric uid, gid\u001b[J\r\n-o  -- display file flags\u001b[J\r\n-p  -- append file type indicators for directory\u001b[J\r\n-q  -- hide control chars\u001b[J\r\n-r  -- reverse sort order\u001b[J\r\n-s  -- display size of each "
+    ],
+    [
+      0.001131,
+      "file in blocks\u001b[J\r\n-t  -- so"
+    ],
+    [
+      0.000010,
+      "rt by modification time\u001b[J\r\n-u  -- access time\u001b[J\r\n-w  -- print raw characters\u001b[J\r\n-x  -- sort horizontally\u001b[J\r\n\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m\u003e\u001b[39m ls -\u001b[K"
+    ],
+    [
+      1.780763,
+      "h"
+    ],
+    [
+      0.650161,
+      "\u0007"
+    ],
+    [
+      0.000091,
+      "\r\r\n"
+    ],
+    [
+      0.000141,
+      "\u001b[00m-1  -- single column output\r\n-A  -- list all except . and ..\r\n-B  -- print octal escapes for control characters\r\n-C  -- list entries in columns sorted vertically\r\n-F  -- append file type indicators\r\n-H  -- follow symlinks on the command line\r\n-L  -- list referenced file for sym link\r\n-P  -- do not follow symlinks\r\n-R  -- list subdirectories recursively\r\n-S  -- sort by size\r\n-T  -- show complete time information\r\n-a  -- list entries starting with .\r\n-b  -- as -B, but use C escape codes whenever possible\r\n-c  -- status change time\r\n-d  -- list directory entries instead of contents\r\n-f  -- output is not sorted\r\n-g  -- long listing but without owner information\r\n-i  -- print file inode numbers\r\n-k  -- print sizes of 1k\r\n-l  -- long listing\r\n-m  -- comma separated\r\n\u001b[J-n  -- numeric uid, gid\u001b[J\r\n-o  -- display file flags\u001b[J\r\n-p  -- append file type indicators for directory\u001b[J\r\n-q  -- hide control chars\u001b[J\r\n-r  -- reverse sort order\u001b[J\r\n-s  -- display size of each file in blocks\u001b[J\r\n-t  -- sort by modification"
+    ],
+    [
+      0.001509,
+      " time\u001b[J\r\n-u  -- access time"
+    ],
+    [
+      0.000065,
+      "\u001b[J\r\n-w  -- print raw characters\u001b[J\r\n-x  -- sort horizontally\u001b[J\r\n\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m\u003e\u001b[39m ls -h\u001b[K"
+    ],
+    [
+      0.564234,
+      " "
+    ],
+    [
+      0.200232,
+      "-"
+    ],
+    [
+      0.334725,
+      "\u0007"
+    ],
+    [
+      0.000074,
+      "\r\r\n"
+    ],
+    [
+      0.000102,
+      "\u001b[00m-1  -- single column output\r\n-A  -- list all except . and ..\r\n-B  -- print octal escapes for control characters\r\n-C  -- list entries in columns sorted vertically\r\n-F  -- append file type indicators\r\n-H  -- follow symlinks on the command line\r\n-L  -- list referenced file for sym link\r\n-P  -- do not follow symlinks\r\n-R  -- list subdirectories recursively\r\n-S  -- sort by size\r\n-T  -- show complete time information\r\n-a  -- list entries starting with .\r\n-b  -- as -B, but use C escape codes whenever possible\r\n-c  -- status change time\r\n-d  -- list directory entries instead of contents\r\n-f  -- output is not sorted\r\n-g  -- long listing but without owner information\r\n-i  -- print file inode numbers\r\n-l  -- long listing\r\n-m  -- comma separated\r\n-n  -- numeric uid, gid\r\n\u001b[J-o  -- display file flags\u001b[J\r\n-p  -- append file type indicators for directory\u001b[J\r\n-q  -- hide control chars\u001b[J\r\n-r  -- reverse sort order\u001b[J\r\n-s  -- display size of each file in blocks\u001b[J\r\n-t  -- sort by modification time\u001b[J\r\n-u  -- access time\u001b"
+    ],
+    [
+      0.001263,
+      "[J\r\n-w  -- print raw charact"
+    ],
+    [
+      0.000010,
+      "ers\u001b[J\r\n-x  -- sort horizontally\u001b[J\r\n\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m\u003e\u001b[39m ls -h -\u001b[K"
+    ],
+    [
+      0.524685,
+      "1"
+    ],
+    [
+      0.000070,
+      "\r\r\n"
+    ],
+    [
+      0.000227,
+      "\u001b[7m-1  -- single column output\u001b[K\u001b[00m\u001b[K\r\n-A  -- list all except . and ..\u001b[K\u001b[K\r\n-B  -- print octal escapes for control characters\u001b[K\u001b[K\r\n-C  -- list entries in columns sorted vertically\u001b[K\u001b[K\r\n-F  -- append file type indicators\u001b[K\u001b[K\r\n-H  -- follow symlinks on the command line\u001b[K\u001b[K\r\n-L  -- list referenced file for sym link\u001b[K\u001b[K\r\n-P  -- do not follow symlinks\u001b[K\u001b[K\r\n-R  -- list subdirectories recursively\u001b[K\u001b[K\r\n-S  -- sort by size\u001b[K\u001b[K\r\n-T  -- show complete time information\u001b[K\u001b[K\r\n-a  -- list entries starting with .\u001b[K\u001b[K\r\n-b  -- as -B, but use C escape codes whenever possible\u001b[K\u001b[K\r\n-c  -- status change time\u001b[K\u001b[K\r\n-d  -- list directory entries instead of contents\u001b[K\u001b[K\r\n-f  -- output is not sorted\u001b[K\u001b[K\r\n-g  -- long listing but without owner information\u001b[K\u001b[K\r\n-i  -- print file inode numbers\u001b[K\u001b[K\r\n-l  -- long listing\u001b[K\u001b[K\r\n-m  -- comma separated\u001b[K\u001b[K\r\n-n  -- numeric uid, gid\u001b[K\u001b[K\r\n\u001b[J-o  -- display file flags\u001b[K\u001b[J\u001b[J\u001b[22A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Cls -h -1\u001b[K\u001b[39m"
+    ],
+    [
+      0.153014,
+      "\r\r\n"
+    ],
+    [
+      0.000034,
+      "\u001b[7m-1  -- single column output\u001b[K\u001b[00m\r\u001b[7m-1  -- single column output\u001b[K\u001b[00m\r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Cls -h -1\u001b[K\u001b[39m"
+    ],
+    [
+      0.000016,
+      "\u0008A"
+    ],
+    [
+      0.000089,
+      "\r\r\n"
+    ],
+    [
+      0.000044,
+      "\u001b[00m-1  -- single column output\u001b[K\r\u001b[1B\u001b[7m-A  -- list all except . and ..\u001b[K\u001b[00m\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000004,
+      "ls -h -A\u001b[K\u001b[39m"
+    ],
+    [
+      0.279589,
+      "\u0008B"
+    ],
+    [
+      0.000100,
+      "\r\r\n"
+    ],
+    [
+      0.000072,
+      "\u001b[1B\u001b[00m-A  -- list all except . and ..\u001b[K\r\u001b[1B\u001b[7m-B  -- print octal escapes for control characters\u001b[K\u001b[00m\r\u001b[3A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Cls -h -B\u001b[K\u001b[39m"
+    ],
+    [
+      0.391761,
+      "\u0008C"
+    ],
+    [
+      0.000102,
+      "\r\r\n"
+    ],
+    [
+      0.000094,
+      "\u001b[2B\u001b[00m-B  -- print octal escapes for control characters\u001b[K\r\u001b[1B\u001b[7m-C  -- list entries in columns sorted vertically\u001b[K\u001b[00m\r\u001b[4A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000007,
+      "ls -h -C\u001b[K\u001b[39m"
+    ],
+    [
+      0.384938,
+      "\u0008F"
+    ],
+    [
+      0.000149,
+      "\r\r\n"
+    ],
+    [
+      0.000123,
+      "\u001b[3B\u001b[00m-C  -- list entries in columns sorted vertically\u001b[K\r\u001b[1B\u001b[7m-F  -- append file type indicators\u001b[K\u001b[00m\r\u001b[5A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000012,
+      "ls -h -F\u001b[K\u001b[39m"
+    ],
+    [
+      0.318403,
+      "\r\r\n\u001b[J\u001b[A\u001b[10C\u001b[1m \u001b[0m"
+    ],
+    [
+      0.000188,
+      "\u0007"
+    ],
+    [
+      0.688094,
+      "\u001b[9D        \u001b[0m \u001b[9D"
+    ],
+    [
+      0.929461,
+      "c"
+    ],
+    [
+      0.160728,
+      "\u0008cd"
+    ],
+    [
+      0.055669,
+      " "
+    ],
+    [
+      0.456582,
+      "、"
+    ],
+    [
+      0.517683,
+      "\u0008\u0008  \u0008\u0008"
+    ],
+    [
+      0.403028,
+      "~"
+    ],
+    [
+      0.230476,
+      "/"
+    ],
+    [
+      0.217187,
+      "d"
+    ],
+    [
+      0.535184,
+      "o"
+    ],
+    [
+      0.151568,
+      "t"
+    ],
+    [
+      0.306059,
+      "\u0007files\u001b[1m/\u001b[0m"
+    ],
+    [
+      0.000047,
+      "\r\r\n\u001b[J"
+    ],
+    [
+      0.000038,
+      "\u001b[J\u001b[01;34mdotfiles\u001b[00m\u001b[0m/\u001b[00m\u001b[J\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Ccd ~/dotfiles\u001b[1m/\u001b[0m\u001b[K\u001b[39m"
+    ],
+    [
+      0.476352,
+      "\u0008\u001b[0m \u0008"
+    ],
+    [
+      0.000014,
+      "\u001b[?1l\u001b\u003e"
+    ],
+    [
+      0.000026,
+      "\r\r\n\u001b[J"
+    ],
+    [
+      0.005608,
+      "\u001b[1m\u001b[7m%\u001b[27m\u001b[1m\u001b[0m                                                                                                        \r \r"
+    ],
+    [
+      0.059226,
+      "\r\n\u001b[31mdmx\u001b[39m@\u001b[34mdmxmbp\u001b[39m:\u001b[34m\u001b[01m~/dotfiles\u001b[22m \u001b[90mgit/master* \u001b[39m\r\n"
+    ],
+    [
+      0.002548,
+      "\u001b]7;file://dmxmbp/Users/dmx/dotfiles\u0007"
+    ],
+    [
+      0.024481,
+      "\r\u001b[0m\u001b[27m\u001b[24m\u001b[J\u001b[35m\u003e\u001b[39m \u001b[K"
+    ],
+    [
+      0.000037,
+      "\u001b[?1h\u001b="
+    ],
+    [
+      0.206131,
+      "g"
+    ],
+    [
+      0.079998,
+      "\u0008gi"
+    ],
+    [
+      0.056301,
+      "t"
+    ],
+    [
+      0.144327,
+      " "
+    ],
+    [
+      0.351472,
+      "c"
+    ],
+    [
+      0.347012,
+      "\u0007"
+    ],
+    [
+      0.000106,
+      "\r\r\n"
+    ],
+    [
+      0.000129,
+      "\u001b[00mcat-file  -- provide content or type information for repository objects\r\ncheck-attr        -- display gitattributes information\r\ncheck-ignore      -- debug gitignore/exclude files\r\ncheck-mailmap     -- show canonical names and email addresses of contacts\r\ncheck-ref-format  -- ensure that a reference name is well formed\r\ncheckout     -- checkout branch or paths to working tree\r\ncheckout-index  -- copy files from index to working directory\r\ncherry         -- find commits not merged upstream\r\ncherry-pick  -- apply changes introduced by some existing commits\r\nci  -- alias for 'commit -a'\r\ncitool       -- graphical alternative to git commit\r\nclean        -- remove untracked files from working tree\r\nclone        -- clone repository into new directory\r\nco  -- alias for 'checkout'\r\ncommit       -- record changes to repository\r\ncommit-tree     -- create new commit object\r\nconfig  -- get and set repository or global options\r\ncount-objects  -- count unpacked objects and display their disk consumption\r\ncvsexportcomm"
+    ],
+    [
+      0.001356,
+      "it  -- export a si"
+    ],
+    [
+      0.000016,
+      "ngle commit to a CVS checkout\r\ncvsimport        -- import a CVS \"repository\" into a git repository\r\n\u001b[Jcvsserver        -- run a CVS server emulator for git\u001b[J\u001b[21A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Cgit c\u001b[K\u001b[39m"
+    ],
+    [
+      0.405447,
+      "at-file"
+    ],
+    [
+      0.000088,
+      "\r\r\n"
+    ],
+    [
+      0.000138,
+      "\u001b[7mcat-file  -- provide content or type information for repository objects\u001b[K\u001b[00m\u001b[K\r\ncheck-attr        -- display gitattributes information\u001b[K\u001b[K\r\ncheck-ignore      -- debug gitignore/exclude files\u001b[K\u001b[K\r\ncheck-mailmap     -- show canonical names and email addresses of contacts\u001b[K\u001b[K\r\ncheck-ref-format  -- ensure that a reference name is well formed\u001b[K\u001b[K\r\ncheckout     -- checkout branch or paths to working tree\u001b[K\u001b[K\r\ncheckout-index  -- copy files from index to working directory\u001b[K\u001b[K\r\ncherry         -- find commits not merged upstream\u001b[K\u001b[K\r\ncherry-pick  -- apply changes introduced by some existing commits\u001b[K\u001b[K\r\nci  -- alias for 'commit -a'\u001b[K\u001b[K\r\ncitool       -- graphical alternative to git commit\u001b[K\u001b[K\r\nclean        -- remove untracked files from working tree\u001b[K\u001b[K\r\nclone        -- clone repository into new directory\u001b[K\u001b[K\r\nco  -- alias for 'checkout'\u001b[K\u001b[K\r\ncommit       -- record changes to repository\u001b[K\u001b[K\r\ncommit-tree     -- create new commit object\u001b[K\u001b[K\r\nconfig  -- get and set repository or global"
+    ],
+    [
+      0.000131,
+      " options\u001b[K\u001b[K\r\nc"
+    ],
+    [
+      0.000011,
+      "ount-objects  -- count unpacked objects and display their disk consumption\u001b[K\u001b[K\r\ncvsexportcommit  -- export a single commit to a CVS checkout\u001b[K\u001b[K\r\ncvsimport        -- import a CVS \"repository\" into a git repository\u001b[K\u001b[K\r\n\u001b[Jcvsserver        -- run a CVS server emulator for git\u001b[K\u001b[J\u001b[21A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Cgit cat-file\u001b[K\u001b[39m"
+    ],
+    [
+      0.115396,
+      "\r\r\n"
+    ],
+    [
+      0.000086,
+      "\u001b[7mcat-file  -- provide content or type information for repository objects\u001b[K\u001b[00m\r\u001b[7mcat-file  -- provide content or type information for repository objects\u001b[K\u001b[00m\r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000008,
+      "git cat-file\u001b[K\u001b[39m"
+    ],
+    [
+      0.000020,
+      "\u0008\u0008\u0008\u0008\u0008\u0008\u0008heck-attr"
+    ],
+    [
+      0.000091,
+      "\r\r\n"
+    ],
+    [
+      0.000053,
+      "\u001b[00mcat-file  -- provide content or type information for repository objects\u001b[K\r\u001b[1B\u001b[7mcheck-attr        -- display gitattributes information\u001b[K\u001b[00m\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000006,
+      "git check-attr\u001b[K\u001b[39m"
+    ],
+    [
+      0.303399,
+      "\u0008\u0008\u0008\u0008ignore"
+    ],
+    [
+      0.000096,
+      "\r\r\n"
+    ],
+    [
+      0.000070,
+      "\u001b[1B\u001b[00mcheck-attr        -- display gitattributes information\u001b[K\r\u001b[1B\u001b[7mcheck-ignore      -- debug gitignore/exclude files\u001b[K\u001b[00m\r\u001b[3A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000030,
+      "git check-ignore\u001b[K\u001b[39m"
+    ],
+    [
+      0.191806,
+      "\u0008\u0008\u0008\u0008\u0008\u0008mailmap"
+    ],
+    [
+      0.000114,
+      "\r\r\n"
+    ],
+    [
+      0.000073,
+      "\u001b[2B\u001b[00mcheck-ignore      -- debug gitignore/exclude files\u001b[K\r\u001b[1B\u001b[7mcheck-mailmap     -- show canonical names and email addresses of contacts\u001b[K\u001b[00m\r\u001b[4A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000006,
+      "git check-mailmap\u001b[K\u001b[39m"
+    ],
+    [
+      0.360029,
+      "\u0008\u0008\u0008\u0008\u0008\u0008\u0008ref-format"
+    ],
+    [
+      0.000111,
+      "\r\r\n"
+    ],
+    [
+      0.000099,
+      "\u001b[3B\u001b[00mcheck-mailmap     -- show canonical names and email addresses of contacts\u001b[K\r\u001b[1B\u001b[7mcheck-ref-format  -- ensure that a reference name is well formed\u001b[K\u001b[00m\r\u001b[5A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000005,
+      "git check-ref-format\u001b[K\u001b[39m"
+    ],
+    [
+      0.191241,
+      "\u001b[11Dout        \u001b[8D"
+    ],
+    [
+      0.000139,
+      "\r\r\n"
+    ],
+    [
+      0.000102,
+      "\u001b[4B\u001b[00mcheck-ref-format  -- ensure that a reference name is well formed\u001b[K\r\u001b[1B\u001b[7mcheckout     -- checkout branch or paths to working tree\u001b[K\u001b[00m\r\u001b[6A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000024,
+      "git checkout\u001b[K\u001b[39m"
+    ],
+    [
+      0.288028,
+      "\r\r\n\u001b[J\u001b[A\u001b[14C\u001b[1m \u001b[0m"
+    ],
+    [
+      0.000126,
+      "\u0007"
+    ],
+    [
+      1.456179,
+      "\u001b[13D            \u001b[0m \u001b[13D"
+    ],
+    [
+      1.713879,
+      "s"
+    ],
+    [
+      0.143890,
+      "\u0008se"
+    ],
+    [
+      0.192114,
+      "d"
+    ],
+    [
+      0.135872,
+      " "
+    ],
+    [
+      0.248324,
+      "-"
+    ],
+    [
+      0.782798,
+      "\u0007"
+    ],
+    [
+      0.000071,
+      "\r\r\n\u001b[J"
+    ],
+    [
+      0.000204,
+      "\u001b[00m-E\u001b[0m  \u001b[00m-r\u001b[0m  \u001b[00m-- use extended regular expressions                                                            \r\n-a\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- delay opening files listed with w function                                                  \r\n-e\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- specify sed commands to run                                                                 \r\n-f\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- add contents of file to commands to run                                                     \r\n-i\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- edit files in-place, running scripts separately for each file                               \r\n-l\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- make output line buffered                                                                   \r\n\u001b[J-n\u001b[0m  \u001b[00m\u001b[J\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[J-- suppress automatic printing of pattern space                                                \u001b[J\u001b[7A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Csed -\u001b[K\u001b[39m"
+    ],
+    [
+      0.424659,
+      "E"
+    ],
+    [
+      0.000090,
+      "\r\r\n"
+    ],
+    [
+      0.000236,
+      "\u001b[7m-E\u001b[00m\u001b[0m  \u001b[00m-r\u001b[0m  \u001b[00m-- use extended regular expressions                                                            \u001b[K\r\n-a\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- delay opening files listed with w function                                                  \u001b[K\r\n-e\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- specify sed commands to run                                                                 \u001b[K\r\n-f\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- add contents of file to commands to run                                                     \u001b[K\r\n-i\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- edit files in-place, running scripts separately for each file                               \u001b[K\r\n-l\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m-- make output line buffered                                                                   \u001b[K\r\n\u001b[J-n\u001b[0m  \u001b[00m\u001b[J\u001b[0m  \u001b[00m\u001b[0m  \u001b[00m\u001b[J-- suppress automatic printing of pattern space                                                \u001b[J\u001b[7A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000005,
+      "sed -E\u001b[K\u001b[39m"
+    ],
+    [
+      0.125657,
+      "\r\r\n"
+    ],
+    [
+      0.000044,
+      "\u001b[7m-E\u001b[00m\u001b[0m  \u001b[00m\r\u001b[7m-E\u001b[00m\u001b[0m  \u001b[00m\r\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2Csed -E\u001b[K\u001b[39m"
+    ],
+    [
+      0.000007,
+      "\u0008a"
+    ],
+    [
+      0.000091,
+      "\r\r\n"
+    ],
+    [
+      0.000042,
+      "\u001b[00m-E\u001b[0m  \u001b[00m\r\u001b[1B\u001b[7m-a\u001b[00m\u001b[0m  \u001b[00m\r\u001b[A\u001b[A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000005,
+      "sed -a\u001b[K\u001b[39m"
+    ],
+    [
+      0.423745,
+      "\u0008e"
+    ],
+    [
+      0.000120,
+      "\r\r\n"
+    ],
+    [
+      0.000087,
+      "\u001b[1B\u001b[00m-a\u001b[0m  \u001b[00m\r\u001b[1B\u001b[7m-e\u001b[00m\u001b[0m  \u001b[00m\r\u001b[3A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000007,
+      "sed -e\u001b[K\u001b[39m"
+    ],
+    [
+      0.255892,
+      "\u0008f"
+    ],
+    [
+      0.000111,
+      "\r\r\n"
+    ],
+    [
+      0.000071,
+      "\u001b[2B\u001b[00m-e\u001b[0m  \u001b[00m\r\u001b[1B\u001b[7m-f\u001b[00m\u001b[0m  \u001b[00m\r\u001b[4A\u001b[0m\u001b[27m\u001b[24m\u001b[39m\r\u001b[2C"
+    ],
+    [
+      0.000005,
+      "sed -f\u001b[K\u001b[39m"
+    ],
+    [
+      0.951151,
+      "\r\r\n\u001b[J\u001b[A\u001b[8C\u001b[1m \u001b[0m"
+    ],
+    [
+      0.000101,
+      "\u0007"
+    ],
+    [
+      0.656408,
+      "\u0008\u0008\u0008\u0008\u0008\u0008\u0008      \u001b[0m \u0008\u0008\u0008\u0008\u0008\u0008\u0008"
+    ],
+    [
+      0.872395,
+      "\r\r\n\u001b[J"
+    ]
+  ]
+}

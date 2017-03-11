@@ -1,0 +1,23 @@
+#+TITLE:       关于我
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2016-05-05 星期四
+#+URI:         /about/
+#+KEYWORDS:    me
+#+TAGS:        me
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 关于我
+
+
+一名游戏猿，特点如下：
+
+- Command Line 重度用户
+- Vim党
+- Emacs新手党
+- Spacemacs忠实粉
+- Mac Lover
+- 熟悉iOS/Mac开发
+- 爱Lua
+- 讨厌Windows
+- Cocos2d-x(爱与恨)

@@ -1,0 +1,35 @@
+#+TITLE:       强大的Mac截图功能
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2016-06-22 三
+#+URI:         /wiki/%y/%m/%d/强大的mac截图功能
+#+KEYWORDS:    mac,screenshot
+#+TAGS:        Mac
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 强大的Mac自带截图功能
+
+* 基本截图
+Cmd+Shift+3 全屏截图并保存文件到桌面
+
+Cmd+Shift+4 选定区域截图并保存文件到桌面
+
+如果这两个截图快捷键再加上Ctrl，那么就不是保存文件，而是保存到Mac系统剪切板,即：
+
+Ctrl+Cmd+Shift+3 全屏截图并保存系统剪贴板
+
+Ctrl+Cmd+Shift+4 选定区域截图并保存系统剪贴板
+
+这样就能用Cmd+V 直接粘贴到想要粘贴的地方了
+* 区域截图的其他用法
+全屏截图没啥可说的，傻瓜式截图。
+
+而Ctrl+Cmd+Shift+4, Cmd+Shift+4 这两个，可以有更多的用法。按下上面的快捷键后：
+** 不选定区域，按一下空格
+这时候十字形截图标志会变成一个小相机，这时候你点击哪个窗口，就能截图了
+** 选定区域
+1. 按住空格可以移动选定区域
+2. 按住shift后，将锁定X或者Y坐标进行拖动
+3. 按住Option后，可以以选定区域的中心X/Y 方向等比缩放
+
+

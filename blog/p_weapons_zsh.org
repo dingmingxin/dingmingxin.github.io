@@ -1,0 +1,177 @@
+#+TITLE:       程序员的七种武器之Zsh
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2016-05-05 星期四
+#+URI:         /blog/%y/%m/%d/程序员的七种武器之zsh
+#+KEYWORDS:    Zsh
+#+TAGS:        Zsh
+#+LANGUAGE:    en
+#+OPTIONS:     H:6 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 介绍zsh的使用及配置
+
+* 简介
+zsh是*nix用户比较少用的一个shell环境，原因除了因为它出生较晚，另一个重要原因就是大多数linux发行版，默认shell环境都是bash。
+
+用的少并不代表不好用，zsh在用户交互提性上是远远好于bash/csh之类的。
+
+易用性：zsh > bash > csh and others
+* Zsh VS Bash : 特点及优势
+bash是大多数linux发行版的默认shell环境，是最通用、最流行的shell
+
+大多数用过bash的同学肯定有同感，bash的自动提示功能太弱了，即使有了bash-completion，补全功能也很有限，下面我总结了一下zsh优于bash的一些特点:
+
+- 强大的补全功能
+- 错误检查以及自动更正
+- 命令别名、路径别名
+- 强大的提示信息
+- oh-my-zsh
+- zsh-history-substring-search
+- 可编程式文件批量重命名 : zmv
+
+* 具体特点详述
+zsh特性繁多，在此我只简单介绍一两个我熟悉并且经常使用的特性
+** 自动补全
+*** cd 自动补全
+**** 路径缩写补全
+#+begin_src sh
+  cd /d/w/t/0 
+  # 相当于下面这行
+  cd /data/work/test/01
+#+end_src
+**** 路径替换
+同一路径的子目录
+#+begin_src sh
+  cd /usr/local/bin && cd bin share 
+  # 相当于下面这行
+  cd /usr/local/bin && cd ../share
+#+end_src
+
+同一路径的中间子目录替换
+#+begin_src sh
+ cd /data/www/site1/apps/common/logic/test && cd site1 site2 
+ #相当于
+ cd /data/www/site1/apps/common/logic/test && cd ../../../../site2/apps/common/logic/test
+#+end_src 
+**** asciinema recording
+[[file:zsh-cd-expand-example.json][zsh cd补全、替换]]
+*** 命令选项补全
+[[file:zsh-command-option-expand.json][zsh命令选项补全]]
+** zsh-history-substring-search
+相比bash中的Ctrl-R，这个插件很好用
+
+启用: 在~/.zshrc中添加: plugins=(history-substring-searc h)
+[[file:zsh-history-substring-search.json][zsh-history-substring-search]]
+
+** 结合fzf更好用(Ctrl-R binding with fzf functions)
+
+安装fzf过程中提示"是否绑定快捷键"，选择是，这样，Ctrl-R 就被绑定到一个基于fzf的函数，代替了原来的zsh Ctrl-R
+(严格来说，这不是zsh提供的特性，暂且就放在这里吧)
+
+[[https://raw.githubusercontent.com/dingmingxin/awesome-tools/master/pics/gif_zsh_fzf_ctrl_r.gif][https://raw.githubusercontent.com/dingmingxin/awesome-tools/master/pics/gif_zsh_fzf_ctrl_r.gif]]
+** 提示主题
+zsh命令提示有很好的接口支持，很容易定制，并且自带了对版本控制工具的信息接口，比如可以当前git 库的分支、当前分支所处的git status信息，都可以获得
+
+
+这里引用一下oh-my-zsh的一些主题
+
+agnoster
+[[https://cloud.githubusercontent.com/assets/2618447/6316862/70f58fb6-ba03-11e4-82c9-c083bf9a6574.png][https://cloud.githubusercontent.com/assets/2618447/6316862/70f58fb6-ba03-11e4-82c9-c083bf9a6574.png]]
+
+bureau
+[[https://cloud.githubusercontent.com/assets/2618447/6316720/51a54ba4-ba00-11e4-82d2-f2af8cc18869.png][https://cloud.githubusercontent.com/assets/2618447/6316720/51a54ba4-ba00-11e4-82d2-f2af8cc18869.png]]
+
+在oh-my-zsh github wiki中罗列了社区贡献的主题:
+
+https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+** 路径别名
+zsh 提供了一个很好用的功能，路径别名
+
+这样针对很长的路径，就不用cd + Tab 来回切了
+
+#+begin_src shell
+  #define: hash -d dir_name="dir_path"
+  #usage: cd ~dir_name or ~dir_name
+
+  hash -d myweb="/data/www/mywebsite"
+  # cd ~myweb 或者 ~myweb 或者直接myweb 就相当于
+  # cd /data/www/mywebsite
+
+  #查看已有的路径别名
+  hash -d -L
+#+end_src
+** Alias
+*** 普通的命令别名
+普通的别名和bash的没有区别
+#+begin_src shell
+  alias gpl="git pull"
+#+end_src
+*** 针对文件类型的别名
+#+begin_src shell
+  alias -s zip="unzip"
+  # 这样只要输入 filename.zip 就自动unzip了
+
+  #类似的，还有下面这种
+  alias -s gz="tar -xzvf"
+  alias -s tgz="tar -xzvf"
+  alias -s bz2="tar -xjvf"
+#+end_src
+*** 显示已有的alias
+#+begin_src shell
+  alias -L  #显示所有的alias
+  alias -g #显示全局的alias
+  alias -s #显示后缀alias-针对文件名的alias
+#+end_src
+
+* Oh-my-zsh
+zsh在开源社区，有个很著名的仓库: [[https://github.com/robbyrussell/oh-my-zsh][oh-my-zsh]]
+** Install
+#+begin_src sh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#+end_src
+
+或者：
+
+#+begin_src sh
+  sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+#+end_src
+** 简介
+oh-my-zsh 安装完成后，会有~/.zshrc ~/.oh-my-zsh
+所有的插件、命令alias、主题等都在 ~/.oh-my-zsh
+
+~/.oh-my-zsh :
+1. /custom : 用于用户自定义的内容
+2. /plugin : oh-my-zsh 自带的插件
+3. /themes : 主题
+
+主题就是shell 的prompt 提示，zsh比其他shell多出来一个右提示，
+提示的可定制性也很强
+
+主题、使用哪些插件、自定义插件，都可以在 oh-my-zsh 安装完之后带的~/.zshrc 里进行配置
+* 我的zsh配置
+有现成的轮子，就不必费劲自己再去创造，暂且用拿来主义来伪装自己吧。我自己维护了一份基于oh-my-zsh的配置: 
+** 安装
+1. Download release package : [[https://github.com/dingmingxin/dotfiles/releases/tag/v0.1.0][dmx-dotfiles v0.1.0]] 
+2. Extract and Install
+#+begin_src sh
+  cp -r dmxdotfiles ~/dotfiles
+  cd ~/dotfiles
+  ./deploy zsh
+#+end_src
+** 配置文件介绍
+
+| 文件             | 内容及作用                          |
+|------------------+-------------------------------------|
+| ~/.zprofile      | zsh环境启动入口文件                 |
+| ~/.zshrc         | 不用解释了^^                        |
+| ~/.zsh_env.zsh   | 环境变量放在这个文件内              |
+| ~/.zsh_alias.zsh | 通用的alias                         |
+| ~/.zsh_custom/   | 存放一写自定义的内容和oh-my-zsh插件 |
+
+** 文件引用顺序
+在我的配置下，zsh启动时依次会source:
+1. ~/.zprofile
+2. ~/.zshrc
+
+我在~/.zshrc里手动source了~/.zsh_env.zsh 和 ~/.zsh_custom 下的一些文件
+
+注意，除了~/.zshrc ~/.zprofile, 其他的都是我自定义的，非zsh标准文件

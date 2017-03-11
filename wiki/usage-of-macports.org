@@ -1,0 +1,53 @@
+#+TITLE:       MacPorts的使用记录
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2016-05-06 星期五
+#+URI:         /wiki/%y/%m/%d/macports的使用记录
+#+KEYWORDS:    MacPorts
+#+TAGS:        MacPorts
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: MacPorts的使用
+
+* 安装卸载port
+#+begin_src shell
+  sudo port install <portname>
+  sudo port uninstall <portname>
+#+end_src	
+* 查看已安装
+** 查看所有已安装
+#+begin_src shell
+  port installed
+#+end_src
+** 查看已安装port所有相关文件
+#+begin_src shell
+  port content <portname>
+#+end_src
+* 选择已安装的
+** Using select
+Example:
+#+begin_src shell
+  sudo port select --set python python27
+#+end_src
+** 激活port
+#+begin_src shell
+  sudo port activate <portname>
+#+end_src
+* 安装旧版本的Port
+如果通过 
+#+begin_src shell
+  port search <portname>
+#+end_src
+找不到自己想要的版本,可以参考下面的链接:
+
+[[https://trac.macports.org/wiki/howto/InstallingOlderPort][InstallingOldPorts]]
+
+通过本地Portfile 文件安装某个版本的port，要注意将Portfile 所在的路径权限设置对
+不要放到 ~/Documents ~/Downloads 之类的目录
+
+#+begin_src shell
+  mkdir ~/macports
+  sudo chown -R macports:admin ~/macports
+#+end_src
+
+然后将相关Portfile放入这个目录就可以了

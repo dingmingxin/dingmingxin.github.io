@@ -1,0 +1,16 @@
+#+TITLE:       skynet postgresql 驱动
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2017-03-11 六
+#+URI:         /blog/%y/%m/%d/skynet-postgresql-驱动
+#+KEYWORDS:    skynet,postgresql
+#+TAGS:        skynet,postgresql
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: skynet postgresql driver
+
+一开始想熟悉postgresql来着，想结合下skynet，顺便熟悉下skynet里面的socketchannel.
+
+搜索了github都没找到skynet的postgresql驱动，但是发现了一个适用于openresty的pg驱动:[[https://github.com/leafo/pgmoon][pgmoon]]， 纯lua实现的。
+
+pg官方，关于第三方驱动的编写的很模糊，只是要求非阻塞交互，基于libpg就可以了。但是skynet建议和外部服务交互时尽量用skynet提供的socket接口，这样以来，libpg指望不上了，于是参考pgmoon这个库，了解了pg的连接，查询方式，经过周五周六两天，撸了出来。这是我第一个数据库驱动: [[https://github.com/dingmingxin/skynet_pgsql][skynet_pgsql]]

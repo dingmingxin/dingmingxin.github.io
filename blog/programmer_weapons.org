@@ -1,0 +1,42 @@
+#+TITLE:       程序员的七种武器
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2016-05-05 星期四
+#+URI:         /blog/%y/%m/%d/程序员的七种武器
+#+KEYWORDS:    Emacs,Vim,Fzf,Zsh,Ag,Tmux,Alfred
+#+TAGS:        Emacs,Vim,Fzf,Zsh,Ag,Tmux,Alfred
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 日常编程中用到的一些工具
+
+[[http://www.gnu.org/licenses/gpl-3.0.html][http://img.shields.io/:license-gpl3-blue.svg]]
+
+* 工具说 
+工欲善其事，必先利其器
+
+人和动物的最大区别就是，人能使用、创造工具. 程序员的能力高低，也可以通过其创造、利用工具的能力来评判
+
+这些我个人在平时的工作中用到的一些工具，它们让我的工作更加高效。下面我讲一一介绍:
+
+注:
+- 本文介绍的武器基本都属于命令行下的工具
+- 本文讲究有图有真相，无图无jb的原则，而且尽量提供gif，保证过瘾
+
+* 配置文件
+本文介绍的工具，配置文件请参考:[[https://github.com/dingmingxin/dotfiles/releases/tag/v0.1.0][dmxdotfiles-v0.1.0]]
+* 七种武器
+1. [[http://dingmingxin.github.io/blog/2016/05/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%B8%83%E7%A7%8D%E6%AD%A6%E5%99%A8%E4%B9%8Bzsh/][程序员的七种武器之Zsh]]
+2. [[http://dingmingxin.github.io/blog/2016/05/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%B8%83%E7%A7%8D%E6%AD%A6%E5%99%A8%E4%B9%8Btmux/][程序员的七种武器之Tmux]]
+3. [[http://dingmingxin.github.io/blog/2016/05/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%B8%83%E7%A7%8D%E6%AD%A6%E5%99%A8%E4%B9%8Bctags/][程序员的七种武器之Ctags]]
+4. [[http://dingmingxin.github.io/blog/2016/05/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%B8%83%E7%A7%8D%E6%AD%A6%E5%99%A8%E4%B9%8Bfzf/][程序员的七种武器之Fzf]]
+5. [[http://dingmingxin.github.io/blog/2016/05/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%B8%83%E7%A7%8D%E6%AD%A6%E5%99%A8%E4%B9%8Beditors/][程序员的七种武器之Editors]]
+6. [[http://dingmingxin.github.io/blog/2016/05/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%B8%83%E7%A7%8D%E6%AD%A6%E5%99%A8%E4%B9%8Bag/][程序员的七种武器之ag]]
+7. [[http://dingmingxin.github.io/blog/2016/05/05/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E4%B8%83%E7%A7%8D%E6%AD%A6%E5%99%A8%E4%B9%8Balfred/][程序员的七种武器之alfred]]
+* 总结
+** 关于编辑器
+编辑器对于程序员来说就像是一把利刃，用好了能事半功倍
+
+但是不管你是vim党还是emacs党，我们选择编辑器，并且深入学习、定制、为其写插件的目的都是一样的，那就是更加高效的学习、工作。
+
+不管你选择vim/emacs/spacemacs 或者其他，只要你对它了解、熟悉，更好的，甚至是精通，它能乖乖的听你的话，那就是有益的；反之，你该思考一下是不是该换一款得心应手的编辑器
+

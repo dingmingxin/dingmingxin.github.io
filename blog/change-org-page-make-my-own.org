@@ -1,0 +1,49 @@
+#+TITLE:       Org-page 修改记
+#+AUTHOR:      dmx
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2016-05-30 一
+#+URI:         /blog/%y/%m/%d/org-page-next-from-org-page
+#+KEYWORDS:    Org-page
+#+TAGS:        Org-mode,Org-page
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:t \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 我对org-page 的改动
+
+* 对原版org-page觉得不足之处
+** org-page 对图片的处理是分散的。
+假如有一张图片在多个org文件中使用，那么，就会在html-branch中存在多份拷贝
+比如:
+
+blog/a.org 中用了test.png
+
+blog/b.org 中也用了test.png
+
+op/do-publication 之后，会出现test.png会出现在
+
+assets/blog/2015/03/02/a/test.png
+
+assets/blog/2015/04/07/b/test.png
+** 图片跨category 不好用
+上面提到的test.png 在org branch 下，需要放到blog目录下才能正常导出
+
+如果有个wiki的类别，也需要用到test.png ，那么不好意思，需要拷贝过去
+
+这是个很不方便的地方
+** wiki的uri默认是blog
+* 我的修改
+[[https://github.com/dingmingxin/org-page][dingmingxin/org-page]]
+** 图片集中管理
+图片都放在org branch op/site-assets-dir 目录下: [[https://github.com/dingmingxin/org-page/commit/6dd7ea3e0075f371de735a5f3fc7d91c06f09b2e][6dd7ea3]]
+
+发布的时候也会将图片拷贝到 html branch op/site-assets-dir 下
+
+op/site-assets-dir 默认值是"assets"
+
+所有图片就是基于assets目录的了
+** 交互式创建post 自动更正category uri
+根据post的category 自动将uri中的目录修正: [[https://github.com/dingmingxin/org-page/commit/761fb4e3d7206a7c2f72c1bcf4884bb71624feba][761fb4e]]
+** fix op/git-last-change-date regex match error
+[[https://github.com/dingmingxin/org-page/commit/a7b28a1886f150baccda1a334df929afff68c488][a7b28a1]]
+
+
+

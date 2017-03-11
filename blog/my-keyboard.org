@@ -1,0 +1,15 @@
+#+TITLE:       我的键盘
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2016-06-04 六
+#+URI:         /blog/%y/%m/%d/我的键盘
+#+KEYWORDS:    机械键盘
+#+TAGS:        机械键盘
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 彩虹机械键盘
+
+* cherry红轴彩虹帽
+[[file:my-keyboard-cherry-red.jpg]]
+
+本来是黑色ABS键帽，用了一年半多之后就很油了，打字很黏，很不爽，于是趁着生日的时候求得了这副彩虹PBT材质的键帽（当然自己掏腰包了)

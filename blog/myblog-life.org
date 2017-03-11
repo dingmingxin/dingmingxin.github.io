@@ -1,0 +1,40 @@
+#+TITLE:       博客记
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2016-06-04 六
+#+URI:         /blog/%y/%m/%d/博客记
+#+KEYWORDS:    Blog,Emacs
+#+TAGS:        Blog,Emacs,Org-page
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: 我的博客大事记
+
+* 博客大事记
+** <2013-12-15 日> 
+建立github pages
+** <2016-05-05 四>
+
+在这之前不断地尝试过各种静态网页生成的工具、流程，都感觉不是那么顺手. org-mode虽说自带了publish功能，但是生成的站点结构不是那么好。
+
+发现 [[https://github.com/kelvinh/org-page][kelvinh/org-page]] 之后，感觉整个世界就都完美了. 于是用它来生成静态网页，push到github pages
+** <2016-05-29 日>
+fork [[https://github.com/kelvinh/org-page][kelvinh/org-page]] ，修改其源码，对图片做集中管理 [[https://github.com/dingningxin/org-page][dingmingxin/org-page]]
+
+谢谢kelvinh的卓越工作
+** <2016-05-30 一>
+美化：
+
+1. 增加dmx theme
+2. 讲原来的tag列表，加了权重用html5 canvas 做成tag cloud
+** <2016-06-03 五>
+优化：
+1. dmx theme 采用bootstrap
+2. 目录栏优化，根据页面位置自动收缩展开相应目录,方便浏览
+3. 图片自适应
+** <2016-06-05 日>
+增加ascienema终端会话回放功能. 示例：
+[[file:asciinema-playback-example.json][asciinema终端回放]]
+
+
+
+
