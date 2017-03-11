@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Org-page 修改记 - 从Hello World开始</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dmx" />
+    <meta name="description" content="我对org-page 的改动" />
+    <meta name="keywords" content="Org-page" />
+    <link rel="icon" href="/assets/everding.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/everding.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/media/bootstrap-3.3.6-dist/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/prettify-solarized-light.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/bootstrap-toc.min.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/main.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/posts.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/dmx.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/asciinema-player.css" type="text/css">
+	<script src="/media/js/jquery-2.1.3.min.js"></script>
+    <script src="/media/bootstrap-3.3.6-dist/js/bootstrap.min.js"> </script>
+	<script src="/media/js/bootstrap-toc.min.js"> </script>
+	<script src="/media/js/dmxmain.js"> </script>
+	<script src="/media/js/asciinema-player.js"> </script>
+	<script src="/media/js/asciinema-player-support.js"> </script>
+  </head>
+
+  <body class="container">
+  <header class="navbar navbar-static-top bs-docs-nav">
+	  <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <!--<span class="sr-only">Toggle navigation</span>-->
+				  <!--<span class="icon-bar"></span>-->
+				  <!--<span class="icon-bar"></span>-->
+				  <!--<span class="icon-bar"></span>-->
+			  </button>
+			  <a class="navbar-brand" href="/">从Hello World开始</a>
+		  </div>
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right" data-smartmenus-id="smartmenus-dmx">
+				  <li class="dmx-menu-item"><a href="/">Home</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/blog/">Blog</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/wiki/">Wiki</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/tags/">Tags</a></li>
+				  <li class="dmx-menu-item"><a href="/about/">About</a></li>
+				  <li class="dmx-menu-item"><a href="https://github.com/dingmingxin">Github</a></li>
+				  <li class="dmx-menu-item"><a href="/rss.xml">Rss</a></li>
+			  </ul>
+		  </div><!-- /.navbar-collapse -->
+	  </div>
+	  </nav>
+  </header>
+
+<div>
+<div class="container center-block">
+	<div class="col-md-1"></div>
+	<div class="col-md-10 col-sm-12">
+		
+			<h1>Org-page 修改记</h1>
+		
+		<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org06e3655">对原版org-page觉得不足之处</a>
+<ul>
+<li><a href="#orge73b6a0">org-page 对图片的处理是分散的。</a></li>
+<li><a href="#orgbd63584">图片跨category 不好用</a></li>
+<li><a href="#org15344a3">wiki的uri默认是blog</a></li>
+</ul>
+</li>
+<li><a href="#org439fd34">我的修改</a>
+<ul>
+<li><a href="#org1e69550">图片集中管理</a></li>
+<li><a href="#orgbd0bf9a">交互式创建post 自动更正category uri</a></li>
+<li><a href="#orgf1a2dd5">fix op/git-last-change-date regex match error</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org06e3655" class="outline-2">
+<h2 id="org06e3655">对原版org-page觉得不足之处</h2>
+<div class="outline-text-2" id="text-org06e3655">
+</div><div id="outline-container-orge73b6a0" class="outline-3">
+<h3 id="orge73b6a0">org-page 对图片的处理是分散的。</h3>
+<div class="outline-text-3" id="text-orge73b6a0">
+<p>
+假如有一张图片在多个org文件中使用，那么，就会在html-branch中存在多份拷贝
+比如:
+</p>
+
+<p>
+blog/a.org 中用了test.png
+</p>
+
+<p>
+blog/b.org 中也用了test.png
+</p>
+
+<p>
+op/do-publication 之后，会出现test.png会出现在
+</p>
+
+<p>
+assets/blog/2015/03/02/a/test.png
+</p>
+
+<p>
+assets/blog/2015/04/07/b/test.png
+</p>
+</div>
+</div>
+<div id="outline-container-orgbd63584" class="outline-3">
+<h3 id="orgbd63584">图片跨category 不好用</h3>
+<div class="outline-text-3" id="text-orgbd63584">
+<p>
+上面提到的test.png 在org branch 下，需要放到blog目录下才能正常导出
+</p>
+
+<p>
+如果有个wiki的类别，也需要用到test.png ，那么不好意思，需要拷贝过去
+</p>
+
+<p>
+这是个很不方便的地方
+</p>
+</div>
+</div>
+<div id="outline-container-org15344a3" class="outline-3">
+<h3 id="org15344a3">wiki的uri默认是blog</h3>
+</div>
+</div>
+<div id="outline-container-org439fd34" class="outline-2">
+<h2 id="org439fd34">我的修改</h2>
+<div class="outline-text-2" id="text-org439fd34">
+<p>
+<a href="https://github.com/dingmingxin/org-page">dingmingxin/org-page</a>
+</p>
+</div>
+<div id="outline-container-org1e69550" class="outline-3">
+<h3 id="org1e69550">图片集中管理</h3>
+<div class="outline-text-3" id="text-org1e69550">
+<p>
+图片都放在org branch op/site-assets-dir 目录下: <a href="https://github.com/dingmingxin/org-page/commit/6dd7ea3e0075f371de735a5f3fc7d91c06f09b2e">6dd7ea3</a>
+</p>
+
+<p>
+发布的时候也会将图片拷贝到 html branch op/site-assets-dir 下
+</p>
+
+<p>
+op/site-assets-dir 默认值是"assets"
+</p>
+
+<p>
+所有图片就是基于assets目录的了
+</p>
+</div>
+</div>
+<div id="outline-container-orgbd0bf9a" class="outline-3">
+<h3 id="orgbd0bf9a">交互式创建post 自动更正category uri</h3>
+<div class="outline-text-3" id="text-orgbd0bf9a">
+<p>
+根据post的category 自动将uri中的目录修正: <a href="https://github.com/dingmingxin/org-page/commit/761fb4e3d7206a7c2f72c1bcf4884bb71624feba">761fb4e</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf1a2dd5" class="outline-3">
+<h3 id="orgf1a2dd5">fix op/git-last-change-date regex match error</h3>
+<div class="outline-text-3" id="text-orgf1a2dd5">
+<p>
+<a href="https://github.com/dingmingxin/org-page/commit/a7b28a1886f150baccda1a334df929afff68c488">a7b28a1</a>
+</p>
+</div>
+</div>
+</div>
+
+	</div>
+	<div class="col-md-1" id="maybe-toc"></div>
+</div>
+</div>
+
+	<div>
+	  
+	  <section>
+		<div class="post-meta text-center">
+			<span title="post date" class="label label-default">2016-05-30</span>
+			<span title="last modification date" class="label label-success">2017-03-11</span>
+			<span title="tags" class="label label-info"><a href="/tags/org-mode/">Org-mode</a>, <a href="/tags/org-page/">Org-page</a></span>
+			<span title="author" class="label label-info">dmx</span>
+		</div>
+	  </section>
+	  
+	  
+	  <script src="/media/js/prettify.r298.min.js"></script>
+	  <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+	  <script src="/media/js/jquery-2.1.3.min.js"></script>
+	  <script src="/media/js/main.js"></script>
+	  <script src="/media/js/jquery.tagcanvas.min.js"></script>
+	  <script src="/media/js/maketagcloud.js"></script>
+	  
+	  <footer class="footer">
+		  <div class="container center-block">
+			  <div class="row">
+				  <div class="col-md-2"> </div>
+				  <div class="col-md-8 col-sm-12">
+					  <p class="text-center">Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+					  <p class="text-center">
+						  Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:dingmingxin20 &lt;at&gt; gmail &lt;dot&gt; com">dmx</a>
+						  &nbsp;&nbsp;-&nbsp;&nbsp;
+						  Powered by <a href="https://github.com/dingmingxin/org-page" target="_blank">org-page</a>
+						  <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+					  </p>
+				  </div>
+				  <div class="col-md-2"> </div>
+			  </div>
+		  </div>
+	  </footer>
+	</div>
+
+  </body>
+</html>

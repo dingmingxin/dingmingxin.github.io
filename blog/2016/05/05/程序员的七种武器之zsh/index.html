@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>程序员的七种武器之Zsh - 从Hello World开始</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dingmingxin" />
+    <meta name="description" content="介绍zsh的使用及配置" />
+    <meta name="keywords" content="Zsh" />
+    <link rel="icon" href="/assets/everding.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/everding.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/media/bootstrap-3.3.6-dist/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/prettify-solarized-light.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/bootstrap-toc.min.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/main.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/posts.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/dmx.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/asciinema-player.css" type="text/css">
+	<script src="/media/js/jquery-2.1.3.min.js"></script>
+    <script src="/media/bootstrap-3.3.6-dist/js/bootstrap.min.js"> </script>
+	<script src="/media/js/bootstrap-toc.min.js"> </script>
+	<script src="/media/js/dmxmain.js"> </script>
+	<script src="/media/js/asciinema-player.js"> </script>
+	<script src="/media/js/asciinema-player-support.js"> </script>
+  </head>
+
+  <body class="container">
+  <header class="navbar navbar-static-top bs-docs-nav">
+	  <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <!--<span class="sr-only">Toggle navigation</span>-->
+				  <!--<span class="icon-bar"></span>-->
+				  <!--<span class="icon-bar"></span>-->
+				  <!--<span class="icon-bar"></span>-->
+			  </button>
+			  <a class="navbar-brand" href="/">从Hello World开始</a>
+		  </div>
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right" data-smartmenus-id="smartmenus-dmx">
+				  <li class="dmx-menu-item"><a href="/">Home</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/blog/">Blog</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/wiki/">Wiki</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/tags/">Tags</a></li>
+				  <li class="dmx-menu-item"><a href="/about/">About</a></li>
+				  <li class="dmx-menu-item"><a href="https://github.com/dingmingxin">Github</a></li>
+				  <li class="dmx-menu-item"><a href="/rss.xml">Rss</a></li>
+			  </ul>
+		  </div><!-- /.navbar-collapse -->
+	  </div>
+	  </nav>
+  </header>
+
+<div>
+<div class="container center-block">
+	<div class="col-md-1"></div>
+	<div class="col-md-10 col-sm-12">
+		
+			<h1>程序员的七种武器之Zsh</h1>
+		
+		<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org470f7b5">简介</a></li>
+<li><a href="#org8a25517">Zsh VS Bash : 特点及优势</a></li>
+<li><a href="#org129c02d">具体特点详述</a>
+<ul>
+<li><a href="#org9f2021f">自动补全</a>
+<ul>
+<li><a href="#org1d23694">cd 自动补全</a>
+<ul>
+<li><a href="#org3134b63">路径缩写补全</a></li>
+<li><a href="#org15f0263">路径替换</a></li>
+<li><a href="#org9a35846">asciinema recording</a></li>
+</ul>
+</li>
+<li><a href="#org617b964">命令选项补全</a></li>
+</ul>
+</li>
+<li><a href="#org71e32a9">zsh-history-substring-search</a></li>
+<li><a href="#orgd2730d5">结合fzf更好用(Ctrl-R binding with fzf functions)</a></li>
+<li><a href="#orgf867d47">提示主题</a></li>
+<li><a href="#orgee6e7e2">路径别名</a></li>
+<li><a href="#org8d191c7">Alias</a>
+<ul>
+<li><a href="#orgabbe663">普通的命令别名</a></li>
+<li><a href="#org7a4bb90">针对文件类型的别名</a></li>
+<li><a href="#org3ce50fb">显示已有的alias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org3726221">Oh-my-zsh</a>
+<ul>
+<li><a href="#orge1b5e27">Install</a></li>
+<li><a href="#org07a662d">简介</a></li>
+</ul>
+</li>
+<li><a href="#orgc7f3812">我的zsh配置</a>
+<ul>
+<li><a href="#orgbda6943">安装</a></li>
+<li><a href="#orge404474">配置文件介绍</a></li>
+<li><a href="#orgc226436">文件引用顺序</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org470f7b5" class="outline-2">
+<h2 id="org470f7b5">简介</h2>
+<div class="outline-text-2" id="text-org470f7b5">
+<p>
+zsh是*nix用户比较少用的一个shell环境，原因除了因为它出生较晚，另一个重要原因就是大多数linux发行版，默认shell环境都是bash。
+</p>
+
+<p>
+用的少并不代表不好用，zsh在用户交互提性上是远远好于bash/csh之类的。
+</p>
+
+<p>
+易用性：zsh &gt; bash &gt; csh and others
+</p>
+</div>
+</div>
+<div id="outline-container-org8a25517" class="outline-2">
+<h2 id="org8a25517">Zsh VS Bash : 特点及优势</h2>
+<div class="outline-text-2" id="text-org8a25517">
+<p>
+bash是大多数linux发行版的默认shell环境，是最通用、最流行的shell
+</p>
+
+<p>
+大多数用过bash的同学肯定有同感，bash的自动提示功能太弱了，即使有了bash-completion，补全功能也很有限，下面我总结了一下zsh优于bash的一些特点:
+</p>
+
+<ul class="org-ul">
+<li>强大的补全功能</li>
+<li>错误检查以及自动更正</li>
+<li>命令别名、路径别名</li>
+<li>强大的提示信息</li>
+<li>oh-my-zsh</li>
+<li>zsh-history-substring-search</li>
+<li>可编程式文件批量重命名 : zmv</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org129c02d" class="outline-2">
+<h2 id="org129c02d">具体特点详述</h2>
+<div class="outline-text-2" id="text-org129c02d">
+<p>
+zsh特性繁多，在此我只简单介绍一两个我熟悉并且经常使用的特性
+</p>
+</div>
+<div id="outline-container-org9f2021f" class="outline-3">
+<h3 id="org9f2021f">自动补全</h3>
+<div class="outline-text-3" id="text-org9f2021f">
+</div><div id="outline-container-org1d23694" class="outline-4">
+<h4 id="org1d23694">cd 自动补全</h4>
+<div class="outline-text-4" id="text-org1d23694">
+</div><div id="outline-container-org3134b63" class="outline-5">
+<h5 id="org3134b63">路径缩写补全</h5>
+<div class="outline-text-5" id="text-org3134b63">
+<div class="org-src-container">
+<pre class="src src-sh">cd /d/w/t/0 
+# 相当于下面这行
+cd /data/work/test/01
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org15f0263" class="outline-5">
+<h5 id="org15f0263">路径替换</h5>
+<div class="outline-text-5" id="text-org15f0263">
+<p>
+同一路径的子目录
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">cd /usr/local/bin &amp;&amp; cd bin share 
+# 相当于下面这行
+cd /usr/local/bin &amp;&amp; cd ../share
+</pre>
+</div>
+
+<p>
+同一路径的中间子目录替换
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">cd /data/www/site1/apps/common/logic/test &amp;&amp; cd site1 site2 
+#相当于
+cd /data/www/site1/apps/common/logic/test &amp;&amp; cd ../../../../site2/apps/common/logic/test
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org9a35846" class="outline-5">
+<h5 id="org9a35846">asciinema recording</h5>
+<div class="outline-text-5" id="text-org9a35846">
+<p>
+<a href="/assets/zsh-cd-expand-example.json">zsh cd补全、替换</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org617b964" class="outline-4">
+<h4 id="org617b964">命令选项补全</h4>
+<div class="outline-text-4" id="text-org617b964">
+<p>
+<a href="/assets/zsh-command-option-expand.json">zsh命令选项补全</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org71e32a9" class="outline-3">
+<h3 id="org71e32a9">zsh-history-substring-search</h3>
+<div class="outline-text-3" id="text-org71e32a9">
+<p>
+相比bash中的Ctrl-R，这个插件很好用
+</p>
+
+<p>
+启用: 在~/.zshrc中添加: plugins=(history-substring-searc h)
+<a href="/assets/zsh-history-substring-search.json">zsh-history-substring-search</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2730d5" class="outline-3">
+<h3 id="orgd2730d5">结合fzf更好用(Ctrl-R binding with fzf functions)</h3>
+<div class="outline-text-3" id="text-orgd2730d5">
+<p>
+安装fzf过程中提示"是否绑定快捷键"，选择是，这样，Ctrl-R 就被绑定到一个基于fzf的函数，代替了原来的zsh Ctrl-R
+(严格来说，这不是zsh提供的特性，暂且就放在这里吧)
+</p>
+
+
+<div class="figure">
+<p><a href="https://raw.githubusercontent.com/dingmingxin/awesome-tools/master/pics/gif_zsh_fzf_ctrl_r.gif"><img src="https://raw.githubusercontent.com/dingmingxin/awesome-tools/master/pics/gif_zsh_fzf_ctrl_r.gif" alt="gif_zsh_fzf_ctrl_r.gif" /></a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf867d47" class="outline-3">
+<h3 id="orgf867d47">提示主题</h3>
+<div class="outline-text-3" id="text-orgf867d47">
+<p>
+zsh命令提示有很好的接口支持，很容易定制，并且自带了对版本控制工具的信息接口，比如可以当前git 库的分支、当前分支所处的git status信息，都可以获得
+</p>
+
+
+<p>
+这里引用一下oh-my-zsh的一些主题
+</p>
+
+<p>
+agnoster
+<a href="https://cloud.githubusercontent.com/assets/2618447/6316862/70f58fb6-ba03-11e4-82c9-c083bf9a6574.png"><img src="https://cloud.githubusercontent.com/assets/2618447/6316862/70f58fb6-ba03-11e4-82c9-c083bf9a6574.png" alt="70f58fb6-ba03-11e4-82c9-c083bf9a6574.png" /></a>
+</p>
+
+<p>
+bureau
+<a href="https://cloud.githubusercontent.com/assets/2618447/6316720/51a54ba4-ba00-11e4-82d2-f2af8cc18869.png"><img src="https://cloud.githubusercontent.com/assets/2618447/6316720/51a54ba4-ba00-11e4-82d2-f2af8cc18869.png" alt="51a54ba4-ba00-11e4-82d2-f2af8cc18869.png" /></a>
+</p>
+
+<p>
+在oh-my-zsh github wiki中罗列了社区贡献的主题:
+</p>
+
+<p>
+<a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes">https://github.com/robbyrussell/oh-my-zsh/wiki/Themes</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgee6e7e2" class="outline-3">
+<h3 id="orgee6e7e2">路径别名</h3>
+<div class="outline-text-3" id="text-orgee6e7e2">
+<p>
+zsh 提供了一个很好用的功能，路径别名
+</p>
+
+<p>
+这样针对很长的路径，就不用cd + Tab 来回切了
+</p>
+
+<div class="org-src-container">
+<pre class="src src-shell">#define: hash -d dir_name="dir_path"
+#usage: cd ~dir_name or ~dir_name
+
+hash -d myweb="/data/www/mywebsite"
+# cd ~myweb 或者 ~myweb 或者直接myweb 就相当于
+# cd /data/www/mywebsite
+
+#查看已有的路径别名
+hash -d -L
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org8d191c7" class="outline-3">
+<h3 id="org8d191c7">Alias</h3>
+<div class="outline-text-3" id="text-org8d191c7">
+</div><div id="outline-container-orgabbe663" class="outline-4">
+<h4 id="orgabbe663">普通的命令别名</h4>
+<div class="outline-text-4" id="text-orgabbe663">
+<p>
+普通的别名和bash的没有区别
+</p>
+<div class="org-src-container">
+<pre class="src src-shell">alias gpl="git pull"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7a4bb90" class="outline-4">
+<h4 id="org7a4bb90">针对文件类型的别名</h4>
+<div class="outline-text-4" id="text-org7a4bb90">
+<div class="org-src-container">
+<pre class="src src-shell">alias -s zip="unzip"
+# 这样只要输入 filename.zip 就自动unzip了
+
+#类似的，还有下面这种
+alias -s gz="tar -xzvf"
+alias -s tgz="tar -xzvf"
+alias -s bz2="tar -xjvf"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3ce50fb" class="outline-4">
+<h4 id="org3ce50fb">显示已有的alias</h4>
+<div class="outline-text-4" id="text-org3ce50fb">
+<div class="org-src-container">
+<pre class="src src-shell">alias -L  #显示所有的alias
+alias -g #显示全局的alias
+alias -s #显示后缀alias-针对文件名的alias
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3726221" class="outline-2">
+<h2 id="org3726221">Oh-my-zsh</h2>
+<div class="outline-text-2" id="text-org3726221">
+<p>
+zsh在开源社区，有个很著名的仓库: <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>
+</p>
+</div>
+<div id="outline-container-orge1b5e27" class="outline-3">
+<h3 id="orge1b5e27">Install</h3>
+<div class="outline-text-3" id="text-orge1b5e27">
+<div class="org-src-container">
+<pre class="src src-sh">sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+</pre>
+</div>
+
+<p>
+或者：
+</p>
+
+<div class="org-src-container">
+<pre class="src src-sh">sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org07a662d" class="outline-3">
+<h3 id="org07a662d">简介</h3>
+<div class="outline-text-3" id="text-org07a662d">
+<p>
+oh-my-zsh 安装完成后，会有~/.zshrc ~/.oh-my-zsh
+所有的插件、命令alias、主题等都在 ~/.oh-my-zsh
+</p>
+
+<p>
+~/.oh-my-zsh :
+</p>
+<ol class="org-ol">
+<li>/custom : 用于用户自定义的内容</li>
+<li>/plugin : oh-my-zsh 自带的插件</li>
+<li>/themes : 主题</li>
+</ol>
+
+<p>
+主题就是shell 的prompt 提示，zsh比其他shell多出来一个右提示，
+提示的可定制性也很强
+</p>
+
+<p>
+主题、使用哪些插件、自定义插件，都可以在 oh-my-zsh 安装完之后带的~/.zshrc 里进行配置
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc7f3812" class="outline-2">
+<h2 id="orgc7f3812">我的zsh配置</h2>
+<div class="outline-text-2" id="text-orgc7f3812">
+<p>
+有现成的轮子，就不必费劲自己再去创造，暂且用拿来主义来伪装自己吧。我自己维护了一份基于oh-my-zsh的配置: 
+</p>
+</div>
+<div id="outline-container-orgbda6943" class="outline-3">
+<h3 id="orgbda6943">安装</h3>
+<div class="outline-text-3" id="text-orgbda6943">
+<ol class="org-ol">
+<li>Download release package : <a href="https://github.com/dingmingxin/dotfiles/releases/tag/v0.1.0">dmx-dotfiles v0.1.0</a></li>
+<li>Extract and Install</li>
+</ol>
+<div class="org-src-container">
+<pre class="src src-sh">cp -r dmxdotfiles ~/dotfiles
+cd ~/dotfiles
+./deploy zsh
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge404474" class="outline-3">
+<h3 id="orge404474">配置文件介绍</h3>
+<div class="outline-text-3" id="text-orge404474">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">文件</th>
+<th scope="col" class="org-left">内容及作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">~/.zprofile</td>
+<td class="org-left">zsh环境启动入口文件</td>
+</tr>
+
+<tr>
+<td class="org-left">~/.zshrc</td>
+<td class="org-left">不用解释了^^</td>
+</tr>
+
+<tr>
+<td class="org-left">~/.zsh_env.zsh</td>
+<td class="org-left">环境变量放在这个文件内</td>
+</tr>
+
+<tr>
+<td class="org-left">~/.zsh_alias.zsh</td>
+<td class="org-left">通用的alias</td>
+</tr>
+
+<tr>
+<td class="org-left">~/.zsh_custom/</td>
+<td class="org-left">存放一写自定义的内容和oh-my-zsh插件</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgc226436" class="outline-3">
+<h3 id="orgc226436">文件引用顺序</h3>
+<div class="outline-text-3" id="text-orgc226436">
+<p>
+在我的配置下，zsh启动时依次会source:
+</p>
+<ol class="org-ol">
+<li>~/.zprofile</li>
+<li>~/.zshrc</li>
+</ol>
+
+<p>
+我在~/.zshrc里手动source了~/.zsh_env.zsh 和 ~/.zsh_custom 下的一些文件
+</p>
+
+<p>
+注意，除了~/.zshrc ~/.zprofile, 其他的都是我自定义的，非zsh标准文件
+</p>
+</div>
+</div>
+</div>
+
+	</div>
+	<div class="col-md-1" id="maybe-toc"></div>
+</div>
+</div>
+
+	<div>
+	  
+	  <section>
+		<div class="post-meta text-center">
+			<span title="post date" class="label label-default">2016-05-05</span>
+			<span title="last modification date" class="label label-success">2017-03-11</span>
+			<span title="tags" class="label label-info"><a href="/tags/zsh/">Zsh</a></span>
+			<span title="author" class="label label-info">dingmingxin</span>
+		</div>
+	  </section>
+	  
+	  
+	  <script src="/media/js/prettify.r298.min.js"></script>
+	  <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+	  <script src="/media/js/jquery-2.1.3.min.js"></script>
+	  <script src="/media/js/main.js"></script>
+	  <script src="/media/js/jquery.tagcanvas.min.js"></script>
+	  <script src="/media/js/maketagcloud.js"></script>
+	  
+	  <footer class="footer">
+		  <div class="container center-block">
+			  <div class="row">
+				  <div class="col-md-2"> </div>
+				  <div class="col-md-8 col-sm-12">
+					  <p class="text-center">Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+					  <p class="text-center">
+						  Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:dingmingxin20 &lt;at&gt; gmail &lt;dot&gt; com">dingmingxin</a>
+						  &nbsp;&nbsp;-&nbsp;&nbsp;
+						  Powered by <a href="https://github.com/dingmingxin/org-page" target="_blank">org-page</a>
+						  <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+					  </p>
+				  </div>
+				  <div class="col-md-2"> </div>
+			  </div>
+		  </div>
+	  </footer>
+	</div>
+
+  </body>
+</html>

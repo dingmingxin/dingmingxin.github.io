@@ -1,0 +1,62 @@
+body {
+	font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif;
+	font-size: 18px;
+	background: #e7e7e7;
+}
+
+.outline-2 h2,h3,h4,h5,h6 {
+	padding-top:50px;
+	margin-top:-20px;
+}
+
+#myCanvas {
+	padding: 0;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	display: block;
+	background:radial-gradient(
+	hsla(0,0%,97%,.5),hsla(58, 100%, 92%, 1)
+	);
+}
+
+.article {
+	outline: 1px solid rgba(211, 211, 211, .6);
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 30px;
+	padding-top: 30px;
+	margin-bottom: 30px;
+	background:-webkit-linear-gradient(
+	to bottom, 
+	rgba(188,255,254,0.8) 0%,
+	rgba(200,255,254,0.5) 5%,
+	rgba(220,255,254,0.3) 10%,
+	rgba(255,255,255,0.8) 20%, 
+	rgba(255,255,255,1) 50%, 
+	rgba(255,255,255,0.8) 80%, 
+	rgba(220,255,254,0.3) 90%,
+	rgba(200,255,254,0.5) 95%,
+	rgba(188,255,254,0.8) 100%
+	);
+	background:linear-gradient(
+	to bottom, 
+	rgba(188,255,254,0.8) 0%,
+	rgba(200,255,254,0.5) 5%,
+	rgba(220,255,254,0.3) 10%,
+	rgba(255,255,255,0.8) 20%, 
+	rgba(255,255,255,1) 50%, 
+	rgba(255,255,255,0.8) 80%, 
+	rgba(220,255,254,0.3) 90%,
+	rgba(200,255,254,0.5) 95%,
+	rgba(188,255,254,0.8) 100%
+	);
+    box-shadow: 2px 2px 8px #aaa;
+    -webkit-box-shadow: 2px 2px 8px #aaa;
+    -moz-box-shadow: 2px 2px 8px #aaa;
+}
+
+/* navbar */
+.navbar-default {
+	opacity: .9;
+}

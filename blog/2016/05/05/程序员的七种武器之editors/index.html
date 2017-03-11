@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>程序员的七种武器之Editors - 从Hello World开始</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dingmingxin" />
+    <meta name="description" content="介绍editors的使用及配置" />
+    <meta name="keywords" content="Vim,Emacs" />
+    <link rel="icon" href="/assets/everding.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/everding.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/media/bootstrap-3.3.6-dist/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/prettify-solarized-light.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/bootstrap-toc.min.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/main.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/posts.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/dmx.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/asciinema-player.css" type="text/css">
+	<script src="/media/js/jquery-2.1.3.min.js"></script>
+    <script src="/media/bootstrap-3.3.6-dist/js/bootstrap.min.js"> </script>
+	<script src="/media/js/bootstrap-toc.min.js"> </script>
+	<script src="/media/js/dmxmain.js"> </script>
+	<script src="/media/js/asciinema-player.js"> </script>
+	<script src="/media/js/asciinema-player-support.js"> </script>
+  </head>
+
+  <body class="container">
+  <header class="navbar navbar-static-top bs-docs-nav">
+	  <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <!--<span class="sr-only">Toggle navigation</span>-->
+				  <!--<span class="icon-bar"></span>-->
+				  <!--<span class="icon-bar"></span>-->
+				  <!--<span class="icon-bar"></span>-->
+			  </button>
+			  <a class="navbar-brand" href="/">从Hello World开始</a>
+		  </div>
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right" data-smartmenus-id="smartmenus-dmx">
+				  <li class="dmx-menu-item"><a href="/">Home</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/blog/">Blog</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/wiki/">Wiki</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/tags/">Tags</a></li>
+				  <li class="dmx-menu-item"><a href="/about/">About</a></li>
+				  <li class="dmx-menu-item"><a href="https://github.com/dingmingxin">Github</a></li>
+				  <li class="dmx-menu-item"><a href="/rss.xml">Rss</a></li>
+			  </ul>
+		  </div><!-- /.navbar-collapse -->
+	  </div>
+	  </nav>
+  </header>
+
+<div>
+<div class="container center-block">
+	<div class="col-md-1"></div>
+	<div class="col-md-10 col-sm-12">
+		
+			<h1>程序员的七种武器之Editors</h1>
+		
+		<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7388ce7">编辑器之神 - Vim</a>
+<ul>
+<li><a href="#org053cdb7">vi</a></li>
+<li><a href="#orgadba164">vim</a>
+<ul>
+<li><a href="#org2b6a4e3">介绍</a></li>
+<li><a href="#org0e830db">如何学习</a></li>
+<li><a href="#org5c04372">模式</a>
+<ul>
+<li><a href="#org35889d4">Normal mode</a></li>
+<li><a href="#org01b6c43">Insert mode</a></li>
+<li><a href="#orgab42e81">Visual mode</a>
+<ul>
+<li><a href="#org84ebedb">行选中</a></li>
+<li><a href="#orgdeba41a">自由选中</a></li>
+<li><a href="#orgb3501b6">块选中</a></li>
+</ul>
+</li>
+<li><a href="#orgeaa7482">Command-Line mode</a></li>
+</ul>
+</li>
+<li><a href="#orgc695a1d">模式间的转换</a>
+<ul>
+<li><a href="#org07f9a65">Normal-&gt;Insert</a></li>
+<li><a href="#orgc5bbe19">Normal-&gt;Visual</a></li>
+<li><a href="#org858ec9e">Normal-&gt;Command-Line</a></li>
+<li><a href="#org79bc7e7">Visual-&gt;Command-Line</a></li>
+<li><a href="#orga661789">Other-mode -&gt; Normal</a></li>
+</ul>
+</li>
+<li><a href="#orga829451">编辑</a>
+<ul>
+<li><a href="#org9eb1c42">移动</a>
+<ul>
+<li><a href="#orgc2ba283">- h j k l: 光标往左、下、上、右移动</a></li>
+<li><a href="#orgdfe4855">w b e ge</a></li>
+<li><a href="#org1ee0130">W B E gE</a></li>
+<li><a href="#orgdf318f8">t T f F</a></li>
+<li><a href="#org5918938">0 ^ $</a></li>
+<li><a href="#org527ef4c">% parenthesis</a></li>
+</ul>
+</li>
+<li><a href="#org3f97d0f">修改 - Making some changes</a>
+<ul>
+<li><a href="#org559ed2a">oprators</a>
+<ul>
+<li><a href="#org262ee4b">d D</a></li>
+<li><a href="#org84d9374">c C</a></li>
+<li><a href="#org29dccf5">s S</a></li>
+<li><a href="#orga63c67b">x X</a></li>
+<li><a href="#orgd32013f">copy and paste</a></li>
+</ul>
+</li>
+<li><a href="#orge0868f8">文本对象</a></li>
+<li><a href="#org65da2eb">命令计数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org22c4549">搜索及替换</a>
+<ul>
+<li><a href="#orgb02cbe5">Search</a></li>
+<li><a href="#org7651287">Replace</a></li>
+</ul>
+</li>
+<li><a href="#orgc3edb5a">高阶使用</a>
+<ul>
+<li><a href="#orgca74adc">配合ctags</a></li>
+</ul>
+</li>
+<li><a href="#org8f15a51">配置部署</a></li>
+<li><a href="#org5e2534f">编辑器定制及扩展</a>
+<ul>
+<li><a href="#org735155d">setting</a></li>
+<li><a href="#org97c357d">Plugin</a>
+<ul>
+<li><a href="#org7e44ee5">Plugins System</a></li>
+<li><a href="#org8967522">Writting Plugins</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org29e5526">关于正则表达式</a></li>
+</ul>
+</li>
+<li><a href="#org4c0d610">神之编辑器 - Emacs</a>
+<ul>
+<li><a href="#orgadb9124">学习Emacs的初衷</a></li>
+<li><a href="#orgf64a78c">Ctrl到死的编辑器</a></li>
+<li><a href="#orgcfe5a27">Evil-mode</a></li>
+</ul>
+</li>
+<li><a href="#org252fe86">神神编辑器 - Spacemacs(Emacs + Evil-mode and more)</a>
+<ul>
+<li><a href="#org9e38078">与Spacemacs邂逅</a></li>
+<li><a href="#org2c4d30c">Spacemacs</a></li>
+<li><a href="#org97fcf4d">Spacemacs原理</a></li>
+<li><a href="#org6ae97a8">Spacemacs使用简单介绍</a>
+<ul>
+<li><a href="#org7e3bfa6">examples</a></li>
+</ul>
+</li>
+<li><a href="#orga8e43ce">Spacemacs Asciinema 录屏</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7388ce7" class="outline-2">
+<h2 id="org7388ce7">编辑器之神 - Vim</h2>
+<div class="outline-text-2" id="text-org7388ce7">
+<p>
+VIM is "Vi IMproved"
+</p>
+
+<p>
+介绍vim之前，先介绍下vi
+</p>
+</div>
+<div id="outline-container-org053cdb7" class="outline-3">
+<h3 id="org053cdb7">vi</h3>
+<div class="outline-text-3" id="text-org053cdb7">
+<p>
+vi是一款由加州大学伯克利分校，Bill Joy 研究开发的文本编辑器
+</p>
+
+<p>
+如果再往前追根溯源，能从vi的操作中看出流编辑器ed的身影
+</p>
+
+<p>
+vi是一款模式编辑器，有一下三种模式:
+</p>
+
+<ol class="org-ol">
+<li>Command mode</li>
+<li>Visual mode</li>
+<li>Insert mode</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgadba164" class="outline-3">
+<h3 id="orgadba164">vim</h3>
+<div class="outline-text-3" id="text-orgadba164">
+<p>
+vim 是vi的衍生版本，在vi的基础上改进和增加了很多特性
+vi的衍生版本有很多，但是vim是这些版本中易用性最好，可扩展度高，用户基础最大的
+一个版本
+</p>
+</div>
+<div id="outline-container-org2b6a4e3" class="outline-4">
+<h4 id="org2b6a4e3">介绍</h4>
+<div class="outline-text-4" id="text-org2b6a4e3">
+<p>
+Link-org: <a href="http://www.vim.org">vim.org</a>
+Link-wikipedia: <a href="https://en.wikipedia.org/wiki/Vim_(text_editor)">Vim(text editor)</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org0e830db" class="outline-4">
+<h4 id="org0e830db">如何学习</h4>
+<div class="outline-text-4" id="text-org0e830db">
+<p>
+学习vim最便捷、最高效的方式，就是在阅读vim的文档
+</p>
+
+<p>
+在vim输入:help或者:h 查看帮助
+</p>
+</div>
+</div>
+<div id="outline-container-org5c04372" class="outline-4">
+<h4 id="org5c04372">模式</h4>
+<div class="outline-text-4" id="text-org5c04372">
+<p>
+vim是模式编辑器，有以下几种不同的模式
+</p>
+</div>
+<div id="outline-container-org35889d4" class="outline-5">
+<h5 id="org35889d4">Normal mode</h5>
+<div class="outline-text-5" id="text-org35889d4">
+<p>
+打开之后就处于正常模式
+用于浏览和修改文本(插入除外)，主要是删除、粘贴等
+</p>
+</div>
+</div>
+<div id="outline-container-org01b6c43" class="outline-5">
+<h5 id="org01b6c43">Insert mode</h5>
+<div class="outline-text-5" id="text-org01b6c43">
+<p>
+插入模式
+这个模式用于正常的写入字符。
+在这个模式下，vim的行为和普通的文本编辑器没有太大区别
+</p>
+</div>
+</div>
+<div id="outline-container-orgab42e81" class="outline-5">
+<h5 id="orgab42e81">Visual mode</h5>
+<div class="outline-text-5" id="text-orgab42e81">
+<p>
+可视模式
+也可以理解为选中模式，相当于选中的高亮的文本处于正常模式下
+</p>
+</div>
+<div id="outline-container-org84ebedb" class="outline-6">
+<h6 id="org84ebedb">行选中</h6>
+<div class="outline-text-6" id="text-org84ebedb">
+<p>
+V
+</p>
+</div>
+</div>
+<div id="outline-container-orgdeba41a" class="outline-6">
+<h6 id="orgdeba41a">自由选中</h6>
+<div class="outline-text-6" id="text-orgdeba41a">
+<p>
+v -&gt; h j k l.... 
+</p>
+</div>
+</div>
+<div id="outline-container-orgb3501b6" class="outline-6">
+<h6 id="orgb3501b6">块选中</h6>
+<div class="outline-text-6" id="text-orgb3501b6">
+<p>
+Ctrl-v
+</p>
+
+<p>
+<a href="/assets/vim-vertical-select.json">vim块选中</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgeaa7482" class="outline-5">
+<h5 id="orgeaa7482">Command-Line mode</h5>
+<div class="outline-text-5" id="text-orgeaa7482">
+<p>
+按: 进入，一般用于高级的用于操作文件的，比如打开、关闭...
+</p>
+
+<p>
+还可以用于高级的编辑
+</p>
+
+<p>
+还可以用于设置编辑的选项等等
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc695a1d" class="outline-4">
+<h4 id="orgc695a1d">模式间的转换</h4>
+<div class="outline-text-4" id="text-orgc695a1d">
+</div><div id="outline-container-org07f9a65" class="outline-5">
+<h5 id="org07f9a65">Normal-&gt;Insert</h5>
+<div class="outline-text-5" id="text-org07f9a65">
+<p>
+在normal模式下按下这些键可以进入 insert模式
+</p>
+
+<p>
+下面是这些按下这些键，进入insert模式之后光标的位置说明
+</p>
+
+<ul class="org-ul">
+<li>i 光标前</li>
+<li>I 行首</li>
+<li>a 光标后</li>
+<li>A 在行末尾</li>
+<li>o 在当前行下面新建行进入插入状态</li>
+<li>O 在当前行之上新建行进入插入状态</li>
+<li>s 删除光标下的字符进入插入状态</li>
+<li>S 删除所在行</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc5bbe19" class="outline-5">
+<h5 id="orgc5bbe19">Normal-&gt;Visual</h5>
+<div class="outline-text-5" id="text-orgc5bbe19">
+<p>
+v V C-v
+</p>
+</div>
+</div>
+
+<div id="outline-container-org858ec9e" class="outline-5">
+<h5 id="org858ec9e">Normal-&gt;Command-Line</h5>
+<div class="outline-text-5" id="text-org858ec9e">
+<pre class="example">
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org79bc7e7" class="outline-5">
+<h5 id="org79bc7e7">Visual-&gt;Command-Line</h5>
+<div class="outline-text-5" id="text-org79bc7e7">
+<pre class="example">
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orga661789" class="outline-5">
+<h5 id="orga661789">Other-mode -&gt; Normal</h5>
+<div class="outline-text-5" id="text-orga661789">
+<p>
+ESC
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga829451" class="outline-4">
+<h4 id="orga829451">编辑</h4>
+<div class="outline-text-4" id="text-orga829451">
+<p>
+大部分的编辑技巧在于normal状态，Insert状态下
+</p>
+
+<p>
+做好提示的配置就可以了
+</p>
+
+<p>
+这里只做简单介绍，具体可参考vim的帮助文件
+</p>
+</div>
+<div id="outline-container-org9eb1c42" class="outline-5">
+<h5 id="org9eb1c42">移动</h5>
+<div class="outline-text-5" id="text-org9eb1c42">
+<p>
+:h usr_03.txt
+</p>
+
+<p>
+Normal 模式下的光标移动
+</p>
+</div>
+
+<div id="outline-container-orgc2ba283" class="outline-6">
+<h6 id="orgc2ba283">- h j k l: 光标往左、下、上、右移动</h6>
+</div>
+<div id="outline-container-orgdfe4855" class="outline-6">
+<h6 id="orgdfe4855">w b e ge</h6>
+<div class="outline-text-6" id="text-orgdfe4855">
+<p>
+w 移动到下一个单词的开头
+b 上一个单词的开头
+e 移动到下一个单词的末尾
+ge 移动到上一个单词的末尾
+</p>
+</div>
+</div>
+<div id="outline-container-org1ee0130" class="outline-6">
+<h6 id="org1ee0130">W B E gE</h6>
+<div class="outline-text-6" id="text-org1ee0130">
+<p>
+跟w/b/e/ge 的移动方向相同
+只不过这里的移动单位不一样，W/B/E/gE将不包含空格的
+一串字符认为是一个移动单位
+举例：1bcd;abcd;abc9
+光标在9的位置时按下B就会跳转到1位置，中间略过了分号
+</p>
+</div>
+</div>
+<div id="outline-container-orgdf318f8" class="outline-6">
+<h6 id="orgdf318f8">t T f F</h6>
+</div>
+<div id="outline-container-org5918938" class="outline-6">
+<h6 id="org5918938">0 ^ $</h6>
+</div>
+<div id="outline-container-org527ef4c" class="outline-6">
+<h6 id="org527ef4c">% parenthesis</h6>
+<div class="outline-text-6" id="text-org527ef4c">
+<p>
+配对的括号间相互移动
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3f97d0f" class="outline-5">
+<h5 id="org3f97d0f">修改 - Making some changes</h5>
+<div class="outline-text-5" id="text-org3f97d0f">
+<p>
+:h usr_04.txt
+</p>
+</div>
+<div id="outline-container-org559ed2a" class="outline-6">
+<h6 id="org559ed2a">oprators</h6>
+<div class="outline-text-6" id="text-org559ed2a">
+<p>
+一般大小写之间区别就是：作用范围大小，作用区域相反(一个向前一个向后...)
+</p>
+</div>
+<div id="outline-container-org262ee4b" class="outline-7">
+<h7 id="org262ee4b">d D</h7>
+<div class="outline-text-7" id="text-org262ee4b">
+<ul class="org-ul">
+<li>dd 删除一行</li>
+<li>diw 删除一个单词，不包括单词靠着的空格、括号等</li>
+<li>D 删除光标到行尾的字符</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org84d9374" class="outline-7">
+<h7 id="org84d9374">c C</h7>
+<div class="outline-text-7" id="text-org84d9374">
+<ul class="org-ul">
+<li>ciw 删除一个单词并进入插入状态</li>
+<li>C 删除光标到行尾的字符</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org29dccf5" class="outline-7">
+<h7 id="org29dccf5">s S</h7>
+<div class="outline-text-7" id="text-org29dccf5">
+<ul class="org-ul">
+<li>s 删除光标所在字符并进入插入状态</li>
+<li>S 删除光标所在行并进入插入状态</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga63c67b" class="outline-7">
+<h7 id="orga63c67b">x X</h7>
+<div class="outline-text-7" id="text-orga63c67b">
+<ul class="org-ul">
+<li>x 删除光标下的字符</li>
+<li>X 删除光标前的字符</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd32013f" class="outline-7">
+<h7 id="orgd32013f">copy and paste</h7>
+<div class="outline-text-7" id="text-orgd32013f">
+<p>
+v p ; V p
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge0868f8" class="outline-6">
+<h6 id="orge0868f8">文本对象</h6>
+<div class="outline-text-6" id="text-orge0868f8">
+<p>
+:h objects
+</p>
+</div>
+</div>
+<div id="outline-container-org65da2eb" class="outline-6">
+<h6 id="org65da2eb">命令计数</h6>
+<div class="outline-text-6" id="text-org65da2eb">
+<p>
+4w  光标向后移动四个单词的位置
+</p>
+
+<p>
+d2w 删除2单词
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org22c4549" class="outline-4">
+<h4 id="org22c4549">搜索及替换</h4>
+<div class="outline-text-4" id="text-org22c4549">
+<p>
+这部分涉及到正则表达式的内容
+</p>
+</div>
+<div id="outline-container-orgb02cbe5" class="outline-5">
+<h5 id="orgb02cbe5">Search</h5>
+<div class="outline-text-5" id="text-orgb02cbe5">
+<p>
+Normal 模式下 按 / 就可以Search
+:h pattern
+</p>
+</div>
+</div>
+<div id="outline-container-org7651287" class="outline-5">
+<h5 id="org7651287">Replace</h5>
+<div class="outline-text-5" id="text-org7651287">
+<p>
+全局替换
+:%s/origin/new/options
+选中之后替换
+:'&lt;,'&gt;s/origin/new/options
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc3edb5a" class="outline-4">
+<h4 id="orgc3edb5a">高阶使用</h4>
+<div class="outline-text-4" id="text-orgc3edb5a">
+<p>
+:g 
+vimcast
+</p>
+</div>
+<div id="outline-container-orgca74adc" class="outline-5">
+<h5 id="orgca74adc">配合ctags</h5>
+</div>
+</div>
+<div id="outline-container-org8f15a51" class="outline-4">
+<h4 id="org8f15a51">配置部署</h4>
+<div class="outline-text-4" id="text-org8f15a51">
+<p>
+cd ~/dotfiles &amp;&amp; ./deploy vim
+</p>
+</div>
+</div>
+<div id="outline-container-org5e2534f" class="outline-4">
+<h4 id="org5e2534f">编辑器定制及扩展</h4>
+<div class="outline-text-4" id="text-org5e2534f">
+<p>
+files: ~/.vimrc ~/.vim
+</p>
+</div>
+<div id="outline-container-org735155d" class="outline-5">
+<h5 id="org735155d">setting</h5>
+<div class="outline-text-5" id="text-org735155d">
+<p>
+:h vimrc
+~/.vimrc
+</p>
+</div>
+</div>
+<div id="outline-container-org97c357d" class="outline-5">
+<h5 id="org97c357d">Plugin</h5>
+<div class="outline-text-5" id="text-org97c357d">
+</div><div id="outline-container-org7e44ee5" class="outline-6">
+<h6 id="org7e44ee5">Plugins System</h6>
+<div class="outline-text-6" id="text-org7e44ee5">
+<ul class="org-ul">
+<li>default</li>
+<li>Pathogen <a href="https://github.com/tpope/vim-pathogen">https://github.com/tpope/vim-pathogen</a> <a href="http://www.vim.org/account/profile.php?user_id=9012">http://www.vim.org/account/profile.php?user_id=9012</a></li>
+<li>Vundle <a href="https://github.com/VundleVim/Vundle.vim">https://github.com/VundleVim/Vundle.vim</a></li>
+<li>NeoBundle</li>
+</ul>
+
+<p>
+个人推荐使用Vundle,具体可参见我的dotfiles/config_vim/vimrc文件 
+</p>
+</div>
+</div>
+<div id="outline-container-org8967522" class="outline-6">
+<h6 id="org8967522">Writting Plugins</h6>
+<div class="outline-text-6" id="text-org8967522">
+<p>
+:h usr_41.txt
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org29e5526" class="outline-3">
+<h3 id="org29e5526">关于正则表达式</h3>
+<div class="outline-text-3" id="text-org29e5526">
+<p>
+使用vim一定要了解正则表达式，这样会让自己的编辑更有效率
+:h pattern
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4c0d610" class="outline-2">
+<h2 id="org4c0d610">神之编辑器 - Emacs</h2>
+<div class="outline-text-2" id="text-org4c0d610">
+<p>
+我个人刚刚接触Emacs编辑器不到半年，所以此处只简单介绍下
+我了解的Emacs的特点
+</p>
+</div>
+<div id="outline-container-orgadb9124" class="outline-3">
+<h3 id="orgadb9124">学习Emacs的初衷</h3>
+<div class="outline-text-3" id="text-orgadb9124">
+<p>
+Emacs 有个模式，org-mode，结构性很强，我发现用它记笔记很方便
+于是我就踏上了学习Emacs的不归路
+</p>
+
+<p>
+Emacs的学习曲线很陡，而且它的理念跟我用了3~4年的vim截然不同，
+因为是无模式的编辑器，要实现某个操作必须按着Ctrl Alt 组合键才能做到，这让我
+很不适应，所以，刚接触Emacs，我的内心其实是拒绝的，但是为了org-mode，我艰难
+的存活了下来，并且在这过程中学了点Emacs-lisp的编程经验
+</p>
+</div>
+</div>
+<div id="outline-container-orgf64a78c" class="outline-3">
+<h3 id="orgf64a78c">Ctrl到死的编辑器</h3>
+<div class="outline-text-3" id="text-orgf64a78c">
+<p>
+Emacs的快捷键很复杂，大多数需要Ctrl Alt Shift 的组合
+所以我给它起了个名字，叫Ctrl到死的编辑器
+</p>
+</div>
+</div>
+<div id="outline-container-orgcfe5a27" class="outline-3">
+<h3 id="orgcfe5a27">Evil-mode</h3>
+<div class="outline-text-3" id="text-orgcfe5a27">
+<p>
+Emacs下模拟vim操作的包有很多，Evil-mode是目前最流行，我个人认为功能比较
+全面的Emacs vim插件。
+</p>
+
+<p>
+基于Evil-mode，开源社区衍生出了好多插件，比如evil-leader......
+</p>
+
+<p>
+Evil-mode 支持vim的模式编辑、查找替换、快捷键映射等等初级、中级的功能
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org252fe86" class="outline-2">
+<h2 id="org252fe86">神神编辑器 - Spacemacs(Emacs + Evil-mode and more)</h2>
+<div class="outline-text-2" id="text-org252fe86">
+<p>
+刚在Emacs中存活下来，我就急不可耐的去找有没有在Emacs中模拟vim
+操作的插件，果不其然，已经有人做了这个大轮子:Evil-mode
+在使用Spacemacs这套配置之前，我一直是用evil-mode，然后其他功能
+依然用Emacs的快捷键，Ctrl到死的操作
+</p>
+
+<p>
+如果没有Evil-mode，我学习使用Emacs没有那么快
+它是我在Emacs中存活的关键
+</p>
+</div>
+
+<div id="outline-container-org9e38078" class="outline-3">
+<h3 id="org9e38078">与Spacemacs邂逅</h3>
+<div class="outline-text-3" id="text-org9e38078">
+<p>
+在我的Emacs配置稳定下来之后，我开始逐渐了解Emacs，为了配置Emacs
+我专门花时间学了下common lisp，声明不止，折腾不息。
+</p>
+
+<p>
+在github上浏览Emacs相关的内容，高级搜索，按照star从高到低排序这么看，
+很快我就发现了Spacemacs 这个git仓库
+</p>
+</div>
+</div>
+<div id="outline-container-org2c4d30c" class="outline-3">
+<h3 id="org2c4d30c">Spacemacs</h3>
+<div class="outline-text-3" id="text-org2c4d30c">
+<ol class="org-ol">
+<li><a href="https://github.com/syl20bnr/spacemacs">Spacemacs github</a></li>
+<li><a href="https://github.com/syl20bnr/spacemacs/tree/master/doc">Spacemacs documents</a></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org97fcf4d" class="outline-3">
+<h3 id="org97fcf4d">Spacemacs原理</h3>
+<div class="outline-text-3" id="text-org97fcf4d">
+<p>
+引用一句名言：
+</p>
+
+<p>
+计算机科学领域的任何问题都可以通过增加一个间接的中间层来解决
+Any problem in computer science can be solved by another layer of indirection
+</p>
+
+<p>
+Spacemacs中很多配置是通过layer来实现的，每层layer约定自己的如下文件：
+</p>
+<ol class="org-ol">
+<li>packages.el --约定layer引用了Emacs哪些package(相当于vim中的plugin)</li>
+<li>config.el --顾名思义，选项配置文件</li>
+<li>funcs.el --自定义函数</li>
+<li>keybindings.el --快捷键绑定</li>
+<li>README.org --该layer的说明</li>
+</ol>
+
+<p>
+而使用Spacemacs这套配置只需要指定自己使用那些layer就可以了。
+当然也能够自己创建layer
+</p>
+
+<p>
+分层的结果是，配置起来更加规范，如果想禁用或者开启某些功能不用在
+很多配置文件中查找了。还有就是Spacemacs对Emacs启动速度做了优化，增加了
+缓存和延迟加载，比如启动的时候并不是加载所有layer，而是按照需求来加载相关
+的layer，尤其是在Emacs daemon模式下，启动速度更快
+</p>
+</div>
+</div>
+<div id="outline-container-org6ae97a8" class="outline-3">
+<h3 id="org6ae97a8">Spacemacs使用简单介绍</h3>
+<div class="outline-text-3" id="text-org6ae97a8">
+<p>
+Spacemacs中有一个key sequences的概念，利用它，我们就可以像
+访问应用程序的菜单一样，一级一级的拿到自己想要的功能
+</p>
+
+<p>
+比如，在应用里，通常有File-&gt;OpenRecentFiles 这个菜单
+那么在Spacemacs中就有这样的快捷键:&lt;space&gt;fr,依次按下
+空格、f、r，Spacemacs就会在底部打开一个helm buffer,里面是
+最近打开的文件。而&lt;space&gt;ff 则代表要打开文件，会让你输入
+文件的路径。
+</p>
+
+<p>
+通过上面简单的两个例子，Spacemacs的使用跟用鼠标点击菜单栏
+的功能是很类似的:
+</p>
+
+<p>
+&lt;space&gt; --1.告诉Emacs我要使用菜单了
+</p>
+
+<p>
+f       --2.告诉Emacs我要使用一级菜单下的Files 菜单项
+</p>
+
+<p>
+r       --3.告诉Emacs我要使用Files-&gt;OpenRecentFiles菜单项，请给我一份最近打开的文件列表
+</p>
+
+<p>
+虽然和鼠标操作原理很类似，但是比鼠标操作高效很多很多，而且这些key sequences都是有意义的
+很容易记住
+</p>
+
+<p>
+当然，这些快捷键菜单是自己可以配置的，具体配置请翻阅spacemace的官方文档
+</p>
+</div>
+<div id="outline-container-org7e3bfa6" class="outline-4">
+<h4 id="org7e3bfa6">examples</h4>
+<div class="outline-text-4" id="text-org7e3bfa6">
+<p>
+&lt;space&gt;sj --jump in buffer
+&lt;space&gt;pf --search file in project for open
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orga8e43ce" class="outline-3">
+<h3 id="orga8e43ce">Spacemacs Asciinema 录屏</h3>
+</div>
+</div>
+
+	</div>
+	<div class="col-md-1" id="maybe-toc"></div>
+</div>
+</div>
+
+	<div>
+	  
+	  <section>
+		<div class="post-meta text-center">
+			<span title="post date" class="label label-default">2016-05-05</span>
+			<span title="last modification date" class="label label-success">2017-03-11</span>
+			<span title="tags" class="label label-info"><a href="/tags/vim/">Vim</a>, <a href="/tags/emacs/">Emacs</a></span>
+			<span title="author" class="label label-info">dingmingxin</span>
+		</div>
+	  </section>
+	  
+	  
+	  <script src="/media/js/prettify.r298.min.js"></script>
+	  <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+	  <script src="/media/js/jquery-2.1.3.min.js"></script>
+	  <script src="/media/js/main.js"></script>
+	  <script src="/media/js/jquery.tagcanvas.min.js"></script>
+	  <script src="/media/js/maketagcloud.js"></script>
+	  
+	  <footer class="footer">
+		  <div class="container center-block">
+			  <div class="row">
+				  <div class="col-md-2"> </div>
+				  <div class="col-md-8 col-sm-12">
+					  <p class="text-center">Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+					  <p class="text-center">
+						  Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:dingmingxin20 &lt;at&gt; gmail &lt;dot&gt; com">dingmingxin</a>
+						  &nbsp;&nbsp;-&nbsp;&nbsp;
+						  Powered by <a href="https://github.com/dingmingxin/org-page" target="_blank">org-page</a>
+						  <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+					  </p>
+				  </div>
+				  <div class="col-md-2"> </div>
+			  </div>
+		  </div>
+	  </footer>
+	</div>
+
+  </body>
+</html>

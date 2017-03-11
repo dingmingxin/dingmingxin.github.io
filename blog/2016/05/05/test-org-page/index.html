@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Org-page - Blog Engine - 从Hello World开始</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="dingmingxin" />
+    <meta name="description" content="test org page" />
+    <meta name="keywords" content="Org-page,Github-page" />
+    <link rel="icon" href="/assets/everding.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/everding.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/media/bootstrap-3.3.6-dist/css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/prettify-solarized-light.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/bootstrap-toc.min.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/main.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/posts.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/dmx.css" type="text/css">
+	<link rel="stylesheet" href="/media/css/asciinema-player.css" type="text/css">
+	<script src="/media/js/jquery-2.1.3.min.js"></script>
+    <script src="/media/bootstrap-3.3.6-dist/js/bootstrap.min.js"> </script>
+	<script src="/media/js/bootstrap-toc.min.js"> </script>
+	<script src="/media/js/dmxmain.js"> </script>
+	<script src="/media/js/asciinema-player.js"> </script>
+	<script src="/media/js/asciinema-player-support.js"> </script>
+  </head>
+
+  <body class="container">
+  <header class="navbar navbar-static-top bs-docs-nav">
+	  <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				  <!--<span class="sr-only">Toggle navigation</span>-->
+				  <!--<span class="icon-bar"></span>-->
+				  <!--<span class="icon-bar"></span>-->
+				  <!--<span class="icon-bar"></span>-->
+			  </button>
+			  <a class="navbar-brand" href="/">从Hello World开始</a>
+		  </div>
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			  <ul class="nav navbar-nav navbar-right" data-smartmenus-id="smartmenus-dmx">
+				  <li class="dmx-menu-item"><a href="/">Home</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/blog/">Blog</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/wiki/">Wiki</a></li>
+				  
+				  <li class="dmx-menu-item"><a href="/tags/">Tags</a></li>
+				  <li class="dmx-menu-item"><a href="/about/">About</a></li>
+				  <li class="dmx-menu-item"><a href="https://github.com/dingmingxin">Github</a></li>
+				  <li class="dmx-menu-item"><a href="/rss.xml">Rss</a></li>
+			  </ul>
+		  </div><!-- /.navbar-collapse -->
+	  </div>
+	  </nav>
+  </header>
+
+<div>
+<div class="container center-block">
+	<div class="col-md-1"></div>
+	<div class="col-md-10 col-sm-12">
+		
+			<h1>Org-page - Blog Engine</h1>
+		
+		<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgcbe711c">Org-page</a></li>
+<li><a href="#orgd2bb1ed">测试插入图片</a></li>
+<li><a href="#orgc657e01">配置</a>
+<ul>
+<li><a href="#org1f17374">github pages</a></li>
+<li><a href="#orge9d8950">org-page install</a></li>
+<li><a href="#org1e4a691">configuration</a></li>
+</ul>
+</li>
+<li><a href="#orgcdc88d7">Usage</a>
+<ul>
+<li><a href="#org9a241bf">New post</a></li>
+<li><a href="#org4a2042b">发布</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcbe711c" class="outline-2">
+<h2 id="orgcbe711c">Org-page</h2>
+<div class="outline-text-2" id="text-orgcbe711c">
+<p>
+某年某月的某一天，在github发现了一个org-page 的静态网站生成器
+</p>
+
+<p>
+org-page基于Emacs org-mode发布到github pages生成静态网站文件的工具
+</p>
+
+<p>
+有人问:好用吗。经过简单配置，结论：好用
+</p>
+</div>
+</div>
+<div id="outline-container-orgd2bb1ed" class="outline-2">
+<h2 id="orgd2bb1ed">测试插入图片</h2>
+<div class="outline-text-2" id="text-orgd2bb1ed">
+<p>
+<img src="/assets/penguins-vim-emacs.png" alt="/assets/penguins-vim-emacs.png" />
+dog
+<img src="/assets/dog.png" alt="/assets/dog.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgc657e01" class="outline-2">
+<h2 id="orgc657e01">配置</h2>
+<div class="outline-text-2" id="text-orgc657e01">
+</div><div id="outline-container-org1f17374" class="outline-3">
+<h3 id="org1f17374">github pages</h3>
+<div class="outline-text-3" id="text-org1f17374">
+<p>
+首先你要有自己的github pages 仓库
+</p>
+
+<p>
+并且要新建一个空白分支叫source，这个分支下存放org文件
+</p>
+
+<p>
+master 分支存放生成的网页文件。
+</p>
+</div>
+</div>
+<div id="outline-container-orge9d8950" class="outline-3">
+<h3 id="orge9d8950">org-page install</h3>
+<div class="outline-text-3" id="text-orge9d8950">
+<p>
+参考: <a href="https://github.com/kelvinh/org-page">https://github.com/kelvinh/org-page</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org1e4a691" class="outline-3">
+<h3 id="org1e4a691">configuration</h3>
+<div class="outline-text-3" id="text-org1e4a691">
+<div class="org-src-container">
+<pre class="src src-elisp">(setq op/repository-directory "~/Documents/github/dingmingxin.github.io" ;;本地仓库位置
+	  op/repository-org-branch "source" ;;指定org文件所在分支
+	  op/repository-html-branch "master" ;;指定网页文件所在分支
+	  op/personal-github-link "https://github.com/dingmingxin" ;;github 连接
+	  op/site-domain "http://dingmingxin.github.io/" 
+	  op/site-main-title "从Hello World开始"
+	  op/theme 'mdo) ;; 主题
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcdc88d7" class="outline-2">
+<h2 id="orgcdc88d7">Usage</h2>
+<div class="outline-text-2" id="text-orgcdc88d7">
+</div><div id="outline-container-org9a241bf" class="outline-3">
+<h3 id="org9a241bf">New post</h3>
+<div class="outline-text-3" id="text-org9a241bf">
+<p>
+org-page 提供了一个交互式创建文章的方式
+</p>
+
+<p>
+M-x op/new-post
+</p>
+
+<p>
+这个过程中，会让你输入文章的文件名、选项、url、tags、keywords等参数，这样org文件的头基本就搞定了，然后你只需要往里面填写内容就可以了
+</p>
+
+<p>
+<a href="/assets/org-page-new-post.json">Org-page new-post workflow</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org4a2042b" class="outline-3">
+<h3 id="org4a2042b">发布</h3>
+<div class="outline-text-3" id="text-org4a2042b">
+<p>
+首先在source分支下修改org文件，commit
+</p>
+
+<p>
+然后 M-x -&gt; op/do-publication t nil t t
+</p>
+
+<p>
+这样source分支下的org文件就自动转换为master下的网页文件，
+</p>
+
+<p>
+并且自动提交到远程分支
+</p>
+
+<p>
+打开github pages就能看到新的页面了
+</p>
+
+<p>
+<a href="/assets/org-page-publication.json">org-page 发布流程</a>
+</p>
+</div>
+</div>
+</div>
+
+	</div>
+	<div class="col-md-1" id="maybe-toc"></div>
+</div>
+</div>
+
+	<div>
+	  
+	  <section>
+		<div class="post-meta text-center">
+			<span title="post date" class="label label-default">2016-05-05</span>
+			<span title="last modification date" class="label label-success">2017-03-11</span>
+			<span title="tags" class="label label-info"><a href="/tags/emacs/">Emacs</a></span>
+			<span title="author" class="label label-info">dingmingxin</span>
+		</div>
+	  </section>
+	  
+	  
+	  <script src="/media/js/prettify.r298.min.js"></script>
+	  <!-- <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+	  <script src="/media/js/jquery-2.1.3.min.js"></script>
+	  <script src="/media/js/main.js"></script>
+	  <script src="/media/js/jquery.tagcanvas.min.js"></script>
+	  <script src="/media/js/maketagcloud.js"></script>
+	  
+	  <footer class="footer">
+		  <div class="container center-block">
+			  <div class="row">
+				  <div class="col-md-2"> </div>
+				  <div class="col-md-8 col-sm-12">
+					  <p class="text-center">Generated by <a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.x (<a href="http://orgmode.org">Org mode</a> 9.x)</p>
+					  <p class="text-center">
+						  Copyright &copy; 2012 - <span id="footerYear"></span> <a href="mailto:dingmingxin20 &lt;at&gt; gmail &lt;dot&gt; com">dingmingxin</a>
+						  &nbsp;&nbsp;-&nbsp;&nbsp;
+						  Powered by <a href="https://github.com/dingmingxin/org-page" target="_blank">org-page</a>
+						  <script type="text/javascript">document.getElementById("footerYear").innerHTML = (new Date()).getFullYear();</script>
+					  </p>
+				  </div>
+				  <div class="col-md-2"> </div>
+			  </div>
+		  </div>
+	  </footer>
+	</div>
+
+  </body>
+</html>
