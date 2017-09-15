@@ -1,0 +1,30 @@
+#+TITLE:       入手一款新的机械键盘
+#+AUTHOR:      dingmingxin
+#+EMAIL:       dingmingxin20@gmail.com
+#+DATE:        2017-09-15 五
+#+URI:         /blog/%y/%m/%d/入手一款新的机械键盘
+#+KEYWORDS:    keyboard
+#+TAGS:        keyboard
+#+LANGUAGE:    en
+#+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+DESCRIPTION: desc
+
+* 换了一个键盘
+之前的那个cherry max 3.0，由于原厂abs键帽用了一年多打油了，被我换成了彩虹色的pbt材质的。刚开始用的时候就觉得有点生硬，使用起来没有原厂的那么流畅。
+
+我猜测可能是彩虹键帽比原厂键帽高的原因吧。还有个可能的原因，很简单，不是原厂的，各种不适应。
+
+no zuo no die，这都是当初自己要换的，忍了吧。后来也就慢慢适应了，中间用macbookpro 工作过一段时间，也就那段时间没有，其他时间都在用这款换过键帽的键盘。
+
+* new keyboard
+后来，工作换了。公司大了，公司里同事的各种机械键盘，有定制的，有原厂的，filco的，cherry的等等，用着自己那把不太舒服的键盘，心里又开始嘀咕了。
+
+再后来，还是换掉了。考虑到不需要那么多键位的，就调了个87键位的小键盘。
+
+最后入手了leopold FC750R 白色侧刻红轴，很爽。选择这个有好多原因，最重要的是，白色侧刻pbt红轴! 
+
+还是原装的好，再也不换键帽了。
+
+[[file:my-keyboard-leopold-red-white-keycap-1.jpg]]
+
+[[file:my-keyboard-leopold-red-white-keycap.jpg]]
