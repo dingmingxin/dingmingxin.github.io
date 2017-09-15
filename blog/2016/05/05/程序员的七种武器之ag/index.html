@@ -67,24 +67,24 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc8a9126">ag vs ack</a></li>
-<li><a href="#org82530eb">Help</a></li>
-<li><a href="#org245bcde">Usage</a>
+<li><a href="#org270265d">ag vs ack</a></li>
+<li><a href="#orgc172edf">Help</a></li>
+<li><a href="#org3332946">Usage</a>
 <ul>
-<li><a href="#orgd9234fc">查看支持的文件类型</a></li>
-<li><a href="#orgdaf80fd">Examples</a>
+<li><a href="#org4941a35">查看支持的文件类型</a></li>
+<li><a href="#org43e2703">Examples</a>
 <ul>
-<li><a href="#org2db151a">搜索所有lua脚本</a>
+<li><a href="#org6860470">搜索所有lua脚本</a>
 <ul>
-<li><a href="#org9888312">方式1：</a></li>
-<li><a href="#orgd7e48c0">方式2:</a></li>
+<li><a href="#org8a02d97">方式1：</a></li>
+<li><a href="#org405437d">方式2:</a></li>
 </ul>
 </li>
-<li><a href="#org3c4ab85">搜索版本控制系统忽略的文件</a></li>
-<li><a href="#orgeb46e29">使用正则搜索</a>
+<li><a href="#org0da795c">搜索版本控制系统忽略的文件</a></li>
+<li><a href="#org103da07">使用正则搜索</a>
 <ul>
-<li><a href="#org642e877">搜索单词</a></li>
-<li><a href="#org4411d20">正则分组匹配</a></li>
+<li><a href="#orga38ca25">搜索单词</a></li>
+<li><a href="#orgbd203cb">正则分组匹配</a></li>
 </ul>
 </li>
 </ul>
@@ -99,26 +99,26 @@ github: <a href="https://github.com/ggreer/the_silver_searcher">the_silver_searc
 比ack快的终端文件内容搜索工具
 当你打开终端，面对一个很大很复杂的工程，想去找一个函数的定义或者调用，ag就能帮上忙
 </p>
-<div id="outline-container-orgc8a9126" class="outline-2">
-<h2 id="orgc8a9126">ag vs ack</h2>
-<div class="outline-text-2" id="text-orgc8a9126">
+<div id="outline-container-org270265d" class="outline-2">
+<h2 id="org270265d">ag vs ack</h2>
+<div class="outline-text-2" id="text-org270265d">
 <p>
 A code searching tool similar to ack, with a focus on speed.
 </p>
 </div>
 </div>
-<div id="outline-container-org82530eb" class="outline-2">
-<h2 id="org82530eb">Help</h2>
-<div class="outline-text-2" id="text-org82530eb">
+<div id="outline-container-orgc172edf" class="outline-2">
+<h2 id="orgc172edf">Help</h2>
+<div class="outline-text-2" id="text-orgc172edf">
 <div class="org-src-container">
 <pre class="src src-sh">ag --help
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org245bcde" class="outline-2">
-<h2 id="org245bcde">Usage</h2>
-<div class="outline-text-2" id="text-org245bcde">
+<div id="outline-container-org3332946" class="outline-2">
+<h2 id="org3332946">Usage</h2>
+<div class="outline-text-2" id="text-org3332946">
 <div class="org-src-container">
 <pre class="src src-sh">ag [FILE-TYPE] [OPTIONS] PATTERN [PATH]
 </pre>
@@ -130,33 +130,33 @@ PATH可以是dir,也可以是filename, 如果忽略，就会搜索当前路径�
 </p>
 </div>
 
-<div id="outline-container-orgd9234fc" class="outline-3">
-<h3 id="orgd9234fc">查看支持的文件类型</h3>
-<div class="outline-text-3" id="text-orgd9234fc">
+<div id="outline-container-org4941a35" class="outline-3">
+<h3 id="org4941a35">查看支持的文件类型</h3>
+<div class="outline-text-3" id="text-org4941a35">
 <div class="org-src-container">
 <pre class="src src-sh">ag --list-file-types
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgdaf80fd" class="outline-3">
-<h3 id="orgdaf80fd">Examples</h3>
-<div class="outline-text-3" id="text-orgdaf80fd">
-</div><div id="outline-container-org2db151a" class="outline-4">
-<h4 id="org2db151a">搜索所有lua脚本</h4>
-<div class="outline-text-4" id="text-org2db151a">
-</div><div id="outline-container-org9888312" class="outline-5">
-<h5 id="org9888312">方式1：</h5>
-<div class="outline-text-5" id="text-org9888312">
+<div id="outline-container-org43e2703" class="outline-3">
+<h3 id="org43e2703">Examples</h3>
+<div class="outline-text-3" id="text-org43e2703">
+</div><div id="outline-container-org6860470" class="outline-4">
+<h4 id="org6860470">搜索所有lua脚本</h4>
+<div class="outline-text-4" id="text-org6860470">
+</div><div id="outline-container-org8a02d97" class="outline-5">
+<h5 id="org8a02d97">方式1：</h5>
+<div class="outline-text-5" id="text-org8a02d97">
 <div class="org-src-container">
 <pre class="src src-sh">ag --lua search_pattern
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd7e48c0" class="outline-5">
-<h5 id="orgd7e48c0">方式2:</h5>
-<div class="outline-text-5" id="text-orgd7e48c0">
+<div id="outline-container-org405437d" class="outline-5">
+<h5 id="org405437d">方式2:</h5>
+<div class="outline-text-5" id="text-org405437d">
 <div class="org-src-container">
 <pre class="src src-sh">ag -G .lua search_pattern
 </pre>
@@ -169,9 +169,9 @@ PATH可以是dir,也可以是filename, 如果忽略，就会搜索当前路径�
 </div>
 </div>
 </div>
-<div id="outline-container-org3c4ab85" class="outline-4">
-<h4 id="org3c4ab85">搜索版本控制系统忽略的文件</h4>
-<div class="outline-text-4" id="text-org3c4ab85">
+<div id="outline-container-org0da795c" class="outline-4">
+<h4 id="org0da795c">搜索版本控制系统忽略的文件</h4>
+<div class="outline-text-4" id="text-org0da795c">
 <p>
 ag 搜索时，默认忽略了 .gitignore .hgignore .svnignore等版本控制系统所指定
 的忽略的文件，如果想搜索那里面的内容,需要用到 -U选项
@@ -182,9 +182,9 @@ ag 搜索时，默认忽略了 .gitignore .hgignore .svnignore等版本控制系
 </div>
 </div>
 </div>
-<div id="outline-container-orgeb46e29" class="outline-4">
-<h4 id="orgeb46e29">使用正则搜索</h4>
-<div class="outline-text-4" id="text-orgeb46e29">
+<div id="outline-container-org103da07" class="outline-4">
+<h4 id="org103da07">使用正则搜索</h4>
+<div class="outline-text-4" id="text-org103da07">
 <p>
 ag正则搜索使用的是<a href="http://sljit.sourceforge.net/pcre.html">PCRE's JIT compiler</a>, 兼容perl 的正则表达式
 </p>
@@ -193,20 +193,20 @@ ag正则搜索使用的是<a href="http://sljit.sourceforge.net/pcre.html">PCRE'
 正则的使用内容有很多，要真正展开讲的话需要单独的篇幅，这里只举一两个简单的例子
 </p>
 </div>
-<div id="outline-container-org642e877" class="outline-5">
-<h5 id="org642e877">搜索单词</h5>
-<div class="outline-text-5" id="text-org642e877">
+<div id="outline-container-orga38ca25" class="outline-5">
+<h5 id="orga38ca25">搜索单词</h5>
+<div class="outline-text-5" id="text-orga38ca25">
 <div class="org-src-container">
 <pre class="src src-sh">ag "\bword\b"  #搜索单词
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org4411d20" class="outline-5">
-<h5 id="org4411d20">正则分组匹配</h5>
-<div class="outline-text-5" id="text-org4411d20">
+<div id="outline-container-orgbd203cb" class="outline-5">
+<h5 id="orgbd203cb">正则分组匹配</h5>
+<div class="outline-text-5" id="text-orgbd203cb">
 <div class="org-src-container">
-<pre class="src src-sh">ag "(\bkey_word\b):\1:\1"
+<pre class="src src-sh">ag "(\bkey_word\b):\1:\1" 
 </pre>
 </div>
 <p>

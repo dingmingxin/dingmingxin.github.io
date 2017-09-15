@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <title>程序员的七种武器之Tmux - 从Hello World开始</title>
+    <title>入手一款新的机械键盘 - 从Hello World开始</title>
     <meta charset="utf-8" />
     <meta name="author" content="dingmingxin" />
-    <meta name="description" content="介绍tmux的使用及配置" />
-    <meta name="keywords" content="Tmux" />
+    <meta name="description" content="desc" />
+    <meta name="keywords" content="keyboard" />
     <link rel="icon" href="/assets/everding.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/assets/everding.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/media/bootstrap-3.3.6-dist/css/bootstrap.min.css" type="text/css">
@@ -61,169 +61,55 @@
 	<div class="col-md-1"></div>
 	<div class="col-md-10 col-sm-12">
 		
-			<h1>程序员的七种武器之Tmux</h1>
+			<h1>入手一款新的机械键盘</h1>
 		
-		<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#org3563f8d">Asciinema 录屏展示</a></li>
-<li><a href="#orgab30aa7">Tmuxinator</a>
-<ul>
-<li><a href="#org4d4c626">Install</a>
-<ul>
-<li><a href="#orgd529e87">首先设置gem sources list</a></li>
-<li><a href="#orgc946d2f">安装</a></li>
-</ul>
-</li>
-<li><a href="#orgbc36cbf">Usage</a>
-<ul>
-<li><a href="#org09418aa">配置文件示例</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
+		
+<div id="outline-container-orgcc9e9e9" class="outline-2">
+<h2 id="orgcc9e9e9">换了一个键盘</h2>
+<div class="outline-text-2" id="text-orgcc9e9e9">
 <p>
-终端会话管理工具
+之前的那个cherry max 3.0，由于原厂abs键帽用了一年多打油了，被我换成了彩虹色的pbt材质的。刚开始用的时候就觉得有点生硬，使用起来没有原厂的那么流畅。
 </p>
 
 <p>
-你还在为开了好多终端窗口记不住那条命令在哪里运行着吗？你还在为终端窗口的管理而烦恼吗？
+我猜测可能是彩虹键帽比原厂键帽高的原因吧。还有个可能的原因，很简单，不是原厂的，各种不适应。
 </p>
 
 <p>
-有了tmux，你再也不用发愁了，它不会很复杂，一个server, 一个client, 一个配置文件而已
+no zuo no die，这都是当初自己要换的，忍了吧。后来也就慢慢适应了，中间用macbookpro 工作过一段时间，也就那段时间没有，其他时间都在用这款换过键帽的键盘。
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfee6e90" class="outline-2">
+<h2 id="orgfee6e90">new keyboard</h2>
+<div class="outline-text-2" id="text-orgfee6e90">
+<p>
+后来，工作换了。公司大了，公司里同事的各种机械键盘，有定制的，有原厂的，filco的，cherry的等等，用着自己那把不太舒服的键盘，心里又开始嘀咕了。
 </p>
 
 <p>
-具体使用请参考man tmux
-</p>
-
-<div id="outline-container-org3563f8d" class="outline-2">
-<h2 id="org3563f8d">Asciinema 录屏展示</h2>
-<div class="outline-text-2" id="text-org3563f8d">
-<ol class="org-ol">
-<li>window pane 切换</li>
-<li>session 管理</li>
-</ol>
-
-<p>
-<a href="/assets/tmux-tmuxinator.json">tmux-example-with-tmuxinator</a>
-</p>
-</div>
-</div>
-<div id="outline-container-orgab30aa7" class="outline-2">
-<h2 id="orgab30aa7"><a href="https://github.com/tmuxinator/tmuxinator">Tmuxinator</a></h2>
-<div class="outline-text-2" id="text-orgab30aa7">
-<p>
-Manage complex tmux sessions easily
+再后来，还是换掉了。考虑到不需要那么多键位的，就调了个87键位的小键盘。
 </p>
 
 <p>
-从配置文件中读取tmux configuration,然后启动一个会话
-</p>
-</div>
-
-<div id="outline-container-org4d4c626" class="outline-3">
-<h3 id="org4d4c626">Install</h3>
-<div class="outline-text-3" id="text-org4d4c626">
-<p>
-由于国内网络原因, rubygems.org 访问很慢，甚至访问不了. 还好国内有个镜像网站 ruby.taobao.org
-</p>
-</div>
-<div id="outline-container-orgd529e87" class="outline-4">
-<h4 id="orgd529e87">首先设置gem sources list</h4>
-<div class="outline-text-4" id="text-orgd529e87">
-<div class="org-src-container">
-<pre class="src src-shell">gem sources --remove https://rubygems.org/ --add https://ruby.taobao.org/ 
-</pre>
-</div>
-</div>
-</div>
-<div id="outline-container-orgc946d2f" class="outline-4">
-<h4 id="orgc946d2f">安装</h4>
-<div class="outline-text-4" id="text-orgc946d2f">
-<div class="org-src-container">
-<pre class="src src-shell">gem install tmuxinator
-</pre>
-</div>
-</div>
-</div>
-</div>
-<div id="outline-container-orgbc36cbf" class="outline-3">
-<h3 id="orgbc36cbf">Usage</h3>
-<div class="outline-text-3" id="text-orgbc36cbf">
-<p>
-tmuxinator有个alias: mux
+最后入手了leopold FC750R 白色侧刻红轴，很爽。选择这个有好多原因，最重要的是，白色侧刻pbt红轴! 
 </p>
 
 <p>
-配置文件在 ~/.tmuxinator
+还是原装的好，再也不换键帽了。
 </p>
 
-<p>
-假如有个配置文件在~/.tmuxinator/dotfiles.yml,
-</p>
-<div class="org-src-container">
-<pre class="src src-shell">#tmuxinator start dotfiles
-mux start dotfiles 
-</pre>
-</div>
-<p>
-就会启动这个会话, 会话的窗口、pane，以及每个窗口创建时的执行命令以及布局，都可以在dotfiles.yml 中配置. 这样就省去了手动去创建每个窗口了
+
+<div class="figure">
+<p><img src="/assets/my-keyboard-leopold-red-white-keycap-1.jpg" alt="/assets/my-keyboard-leopold-red-white-keycap-1.jpg" />
 </p>
 </div>
 
-<div id="outline-container-org09418aa" class="outline-4">
-<h4 id="org09418aa">配置文件示例</h4>
-<div class="outline-text-4" id="text-org09418aa">
-<div class="org-src-container">
-<pre class="src src-yaml"># ~/.tmuxinator/dotfiles.yml
-name: dotfiles
-root: ~/dotfiles/
 
-windows:
-  - vim:
-	  layout: even-vertical
-	  panes:
-		-
-		-
-  - bash:
-	  layout: even-vertical
-	  panes:
-		-
-		-
-  - tmux:
-	  layout: even-vertical
-	  panes:
-		-
-		-
-</pre>
-</div>
-
-<p>
-详解：
+<div class="figure">
+<p><img src="/assets/my-keyboard-leopold-red-white-keycap.jpg" alt="/assets/my-keyboard-leopold-red-white-keycap.jpg" />
 </p>
-
-<p>
-session name :dotfiles
-</p>
-
-<p>
-session 默认路径 ~/dotfiles
-</p>
-
-<p>
-session 启动时启动三个窗口，窗口名分别为：vim, bash, tmux
-</p>
-
-<p>
-每个窗口开两个面板，布局都是竖向均分布局
-</p>
-</div>
 </div>
 </div>
 </div>
@@ -237,9 +123,9 @@ session 启动时启动三个窗口，窗口名分别为：vim, bash, tmux
 	  
 	  <section>
 		<div class="post-meta text-center">
-			<span title="post date" class="label label-default">2016-05-05</span>
-			<span title="last modification date" class="label label-success">2017-03-11</span>
-			<span title="tags" class="label label-info"><a href="/tags/tmux/">Tmux</a></span>
+			<span title="post date" class="label label-default">2017-09-15</span>
+			<span title="last modification date" class="label label-success">2017-09-15</span>
+			<span title="tags" class="label label-info"><a href="/tags/keyboard/">keyboard</a></span>
 			<span title="author" class="label label-info">dingmingxin</span>
 		</div>
 	  </section>

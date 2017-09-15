@@ -67,55 +67,55 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org470f7b5">简介</a></li>
-<li><a href="#org8a25517">Zsh VS Bash : 特点及优势</a></li>
-<li><a href="#org129c02d">具体特点详述</a>
+<li><a href="#orgd284240">简介</a></li>
+<li><a href="#orgca2a195">Zsh VS Bash : 特点及优势</a></li>
+<li><a href="#org64a048c">具体特点详述</a>
 <ul>
-<li><a href="#org9f2021f">自动补全</a>
+<li><a href="#org7e9ad87">自动补全</a>
 <ul>
-<li><a href="#org1d23694">cd 自动补全</a>
+<li><a href="#org1b8d139">cd 自动补全</a>
 <ul>
-<li><a href="#org3134b63">路径缩写补全</a></li>
-<li><a href="#org15f0263">路径替换</a></li>
-<li><a href="#org9a35846">asciinema recording</a></li>
+<li><a href="#org0e7b4f2">路径缩写补全</a></li>
+<li><a href="#org6abec7e">路径替换</a></li>
+<li><a href="#org3c26896">asciinema recording</a></li>
 </ul>
 </li>
-<li><a href="#org617b964">命令选项补全</a></li>
+<li><a href="#org48d50df">命令选项补全</a></li>
 </ul>
 </li>
-<li><a href="#org71e32a9">zsh-history-substring-search</a></li>
-<li><a href="#orgd2730d5">结合fzf更好用(Ctrl-R binding with fzf functions)</a></li>
-<li><a href="#orgf867d47">提示主题</a></li>
-<li><a href="#orgee6e7e2">路径别名</a></li>
-<li><a href="#org8d191c7">Alias</a>
+<li><a href="#org4f4ad15">zsh-history-substring-search</a></li>
+<li><a href="#org2976e1f">结合fzf更好用(Ctrl-R binding with fzf functions)</a></li>
+<li><a href="#org4852057">提示主题</a></li>
+<li><a href="#org8b47555">路径别名</a></li>
+<li><a href="#orgafcd416">Alias</a>
 <ul>
-<li><a href="#orgabbe663">普通的命令别名</a></li>
-<li><a href="#org7a4bb90">针对文件类型的别名</a></li>
-<li><a href="#org3ce50fb">显示已有的alias</a></li>
+<li><a href="#orgb707134">普通的命令别名</a></li>
+<li><a href="#org1ef2323">针对文件类型的别名</a></li>
+<li><a href="#org0738294">显示已有的alias</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org3726221">Oh-my-zsh</a>
+<li><a href="#org1fce738">Oh-my-zsh</a>
 <ul>
-<li><a href="#orge1b5e27">Install</a></li>
-<li><a href="#org07a662d">简介</a></li>
+<li><a href="#org3d70ccb">Install</a></li>
+<li><a href="#org1803dbe">简介</a></li>
 </ul>
 </li>
-<li><a href="#orgc7f3812">我的zsh配置</a>
+<li><a href="#org17bda15">我的zsh配置</a>
 <ul>
-<li><a href="#orgbda6943">安装</a></li>
-<li><a href="#orge404474">配置文件介绍</a></li>
-<li><a href="#orgc226436">文件引用顺序</a></li>
+<li><a href="#org0dddf57">安装</a></li>
+<li><a href="#orgd5042bc">配置文件介绍</a></li>
+<li><a href="#org3f18528">文件引用顺序</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org470f7b5" class="outline-2">
-<h2 id="org470f7b5">简介</h2>
-<div class="outline-text-2" id="text-org470f7b5">
+<div id="outline-container-orgd284240" class="outline-2">
+<h2 id="orgd284240">简介</h2>
+<div class="outline-text-2" id="text-orgd284240">
 <p>
 zsh是*nix用户比较少用的一个shell环境，原因除了因为它出生较晚，另一个重要原因就是大多数linux发行版，默认shell环境都是bash。
 </p>
@@ -129,9 +129,9 @@ zsh是*nix用户比较少用的一个shell环境，原因除了因为它出生�
 </p>
 </div>
 </div>
-<div id="outline-container-org8a25517" class="outline-2">
-<h2 id="org8a25517">Zsh VS Bash : 特点及优势</h2>
-<div class="outline-text-2" id="text-org8a25517">
+<div id="outline-container-orgca2a195" class="outline-2">
+<h2 id="orgca2a195">Zsh VS Bash : 特点及优势</h2>
+<div class="outline-text-2" id="text-orgca2a195">
 <p>
 bash是大多数linux发行版的默认shell环境，是最通用、最流行的shell
 </p>
@@ -152,22 +152,22 @@ bash是大多数linux发行版的默认shell环境，是最通用、最流行的
 </div>
 </div>
 
-<div id="outline-container-org129c02d" class="outline-2">
-<h2 id="org129c02d">具体特点详述</h2>
-<div class="outline-text-2" id="text-org129c02d">
+<div id="outline-container-org64a048c" class="outline-2">
+<h2 id="org64a048c">具体特点详述</h2>
+<div class="outline-text-2" id="text-org64a048c">
 <p>
 zsh特性繁多，在此我只简单介绍一两个我熟悉并且经常使用的特性
 </p>
 </div>
-<div id="outline-container-org9f2021f" class="outline-3">
-<h3 id="org9f2021f">自动补全</h3>
-<div class="outline-text-3" id="text-org9f2021f">
-</div><div id="outline-container-org1d23694" class="outline-4">
-<h4 id="org1d23694">cd 自动补全</h4>
-<div class="outline-text-4" id="text-org1d23694">
-</div><div id="outline-container-org3134b63" class="outline-5">
-<h5 id="org3134b63">路径缩写补全</h5>
-<div class="outline-text-5" id="text-org3134b63">
+<div id="outline-container-org7e9ad87" class="outline-3">
+<h3 id="org7e9ad87">自动补全</h3>
+<div class="outline-text-3" id="text-org7e9ad87">
+</div><div id="outline-container-org1b8d139" class="outline-4">
+<h4 id="org1b8d139">cd 自动补全</h4>
+<div class="outline-text-4" id="text-org1b8d139">
+</div><div id="outline-container-org0e7b4f2" class="outline-5">
+<h5 id="org0e7b4f2">路径缩写补全</h5>
+<div class="outline-text-5" id="text-org0e7b4f2">
 <div class="org-src-container">
 <pre class="src src-sh">cd /d/w/t/0 
 # 相当于下面这行
@@ -176,9 +176,9 @@ cd /data/work/test/01
 </div>
 </div>
 </div>
-<div id="outline-container-org15f0263" class="outline-5">
-<h5 id="org15f0263">路径替换</h5>
-<div class="outline-text-5" id="text-org15f0263">
+<div id="outline-container-org6abec7e" class="outline-5">
+<h5 id="org6abec7e">路径替换</h5>
+<div class="outline-text-5" id="text-org6abec7e">
 <p>
 同一路径的子目录
 </p>
@@ -200,27 +200,27 @@ cd /data/www/site1/apps/common/logic/test &amp;&amp; cd ../../../../site2/apps/c
 </div>
 </div>
 </div>
-<div id="outline-container-org9a35846" class="outline-5">
-<h5 id="org9a35846">asciinema recording</h5>
-<div class="outline-text-5" id="text-org9a35846">
+<div id="outline-container-org3c26896" class="outline-5">
+<h5 id="org3c26896">asciinema recording</h5>
+<div class="outline-text-5" id="text-org3c26896">
 <p>
 <a href="/assets/zsh-cd-expand-example.json">zsh cd补全、替换</a>
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org617b964" class="outline-4">
-<h4 id="org617b964">命令选项补全</h4>
-<div class="outline-text-4" id="text-org617b964">
+<div id="outline-container-org48d50df" class="outline-4">
+<h4 id="org48d50df">命令选项补全</h4>
+<div class="outline-text-4" id="text-org48d50df">
 <p>
 <a href="/assets/zsh-command-option-expand.json">zsh命令选项补全</a>
 </p>
 </div>
 </div>
 </div>
-<div id="outline-container-org71e32a9" class="outline-3">
-<h3 id="org71e32a9">zsh-history-substring-search</h3>
-<div class="outline-text-3" id="text-org71e32a9">
+<div id="outline-container-org4f4ad15" class="outline-3">
+<h3 id="org4f4ad15">zsh-history-substring-search</h3>
+<div class="outline-text-3" id="text-org4f4ad15">
 <p>
 相比bash中的Ctrl-R，这个插件很好用
 </p>
@@ -232,9 +232,9 @@ cd /data/www/site1/apps/common/logic/test &amp;&amp; cd ../../../../site2/apps/c
 </div>
 </div>
 
-<div id="outline-container-orgd2730d5" class="outline-3">
-<h3 id="orgd2730d5">结合fzf更好用(Ctrl-R binding with fzf functions)</h3>
-<div class="outline-text-3" id="text-orgd2730d5">
+<div id="outline-container-org2976e1f" class="outline-3">
+<h3 id="org2976e1f">结合fzf更好用(Ctrl-R binding with fzf functions)</h3>
+<div class="outline-text-3" id="text-org2976e1f">
 <p>
 安装fzf过程中提示"是否绑定快捷键"，选择是，这样，Ctrl-R 就被绑定到一个基于fzf的函数，代替了原来的zsh Ctrl-R
 (严格来说，这不是zsh提供的特性，暂且就放在这里吧)
@@ -247,9 +247,9 @@ cd /data/www/site1/apps/common/logic/test &amp;&amp; cd ../../../../site2/apps/c
 </div>
 </div>
 </div>
-<div id="outline-container-orgf867d47" class="outline-3">
-<h3 id="orgf867d47">提示主题</h3>
-<div class="outline-text-3" id="text-orgf867d47">
+<div id="outline-container-org4852057" class="outline-3">
+<h3 id="org4852057">提示主题</h3>
+<div class="outline-text-3" id="text-org4852057">
 <p>
 zsh命令提示有很好的接口支持，很容易定制，并且自带了对版本控制工具的信息接口，比如可以当前git 库的分支、当前分支所处的git status信息，都可以获得
 </p>
@@ -278,9 +278,9 @@ bureau
 </p>
 </div>
 </div>
-<div id="outline-container-orgee6e7e2" class="outline-3">
-<h3 id="orgee6e7e2">路径别名</h3>
-<div class="outline-text-3" id="text-orgee6e7e2">
+<div id="outline-container-org8b47555" class="outline-3">
+<h3 id="org8b47555">路径别名</h3>
+<div class="outline-text-3" id="text-org8b47555">
 <p>
 zsh 提供了一个很好用的功能，路径别名
 </p>
@@ -303,12 +303,12 @@ hash -d -L
 </div>
 </div>
 </div>
-<div id="outline-container-org8d191c7" class="outline-3">
-<h3 id="org8d191c7">Alias</h3>
-<div class="outline-text-3" id="text-org8d191c7">
-</div><div id="outline-container-orgabbe663" class="outline-4">
-<h4 id="orgabbe663">普通的命令别名</h4>
-<div class="outline-text-4" id="text-orgabbe663">
+<div id="outline-container-orgafcd416" class="outline-3">
+<h3 id="orgafcd416">Alias</h3>
+<div class="outline-text-3" id="text-orgafcd416">
+</div><div id="outline-container-orgb707134" class="outline-4">
+<h4 id="orgb707134">普通的命令别名</h4>
+<div class="outline-text-4" id="text-orgb707134">
 <p>
 普通的别名和bash的没有区别
 </p>
@@ -318,9 +318,9 @@ hash -d -L
 </div>
 </div>
 </div>
-<div id="outline-container-org7a4bb90" class="outline-4">
-<h4 id="org7a4bb90">针对文件类型的别名</h4>
-<div class="outline-text-4" id="text-org7a4bb90">
+<div id="outline-container-org1ef2323" class="outline-4">
+<h4 id="org1ef2323">针对文件类型的别名</h4>
+<div class="outline-text-4" id="text-org1ef2323">
 <div class="org-src-container">
 <pre class="src src-shell">alias -s zip="unzip"
 # 这样只要输入 filename.zip 就自动unzip了
@@ -333,9 +333,9 @@ alias -s bz2="tar -xjvf"
 </div>
 </div>
 </div>
-<div id="outline-container-org3ce50fb" class="outline-4">
-<h4 id="org3ce50fb">显示已有的alias</h4>
-<div class="outline-text-4" id="text-org3ce50fb">
+<div id="outline-container-org0738294" class="outline-4">
+<h4 id="org0738294">显示已有的alias</h4>
+<div class="outline-text-4" id="text-org0738294">
 <div class="org-src-container">
 <pre class="src src-shell">alias -L  #显示所有的alias
 alias -g #显示全局的alias
@@ -347,16 +347,16 @@ alias -s #显示后缀alias-针对文件名的alias
 </div>
 </div>
 
-<div id="outline-container-org3726221" class="outline-2">
-<h2 id="org3726221">Oh-my-zsh</h2>
-<div class="outline-text-2" id="text-org3726221">
+<div id="outline-container-org1fce738" class="outline-2">
+<h2 id="org1fce738">Oh-my-zsh</h2>
+<div class="outline-text-2" id="text-org1fce738">
 <p>
 zsh在开源社区，有个很著名的仓库: <a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>
 </p>
 </div>
-<div id="outline-container-orge1b5e27" class="outline-3">
-<h3 id="orge1b5e27">Install</h3>
-<div class="outline-text-3" id="text-orge1b5e27">
+<div id="outline-container-org3d70ccb" class="outline-3">
+<h3 id="org3d70ccb">Install</h3>
+<div class="outline-text-3" id="text-org3d70ccb">
 <div class="org-src-container">
 <pre class="src src-sh">sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 </pre>
@@ -372,9 +372,9 @@ zsh在开源社区，有个很著名的仓库: <a href="https://github.com/robby
 </div>
 </div>
 </div>
-<div id="outline-container-org07a662d" class="outline-3">
-<h3 id="org07a662d">简介</h3>
-<div class="outline-text-3" id="text-org07a662d">
+<div id="outline-container-org1803dbe" class="outline-3">
+<h3 id="org1803dbe">简介</h3>
+<div class="outline-text-3" id="text-org1803dbe">
 <p>
 oh-my-zsh 安装完成后，会有~/.zshrc ~/.oh-my-zsh
 所有的插件、命令alias、主题等都在 ~/.oh-my-zsh
@@ -400,16 +400,16 @@ oh-my-zsh 安装完成后，会有~/.zshrc ~/.oh-my-zsh
 </div>
 </div>
 </div>
-<div id="outline-container-orgc7f3812" class="outline-2">
-<h2 id="orgc7f3812">我的zsh配置</h2>
-<div class="outline-text-2" id="text-orgc7f3812">
+<div id="outline-container-org17bda15" class="outline-2">
+<h2 id="org17bda15">我的zsh配置</h2>
+<div class="outline-text-2" id="text-org17bda15">
 <p>
 有现成的轮子，就不必费劲自己再去创造，暂且用拿来主义来伪装自己吧。我自己维护了一份基于oh-my-zsh的配置: 
 </p>
 </div>
-<div id="outline-container-orgbda6943" class="outline-3">
-<h3 id="orgbda6943">安装</h3>
-<div class="outline-text-3" id="text-orgbda6943">
+<div id="outline-container-org0dddf57" class="outline-3">
+<h3 id="org0dddf57">安装</h3>
+<div class="outline-text-3" id="text-org0dddf57">
 <ol class="org-ol">
 <li>Download release package : <a href="https://github.com/dingmingxin/dotfiles/releases/tag/v0.1.0">dmx-dotfiles v0.1.0</a></li>
 <li>Extract and Install</li>
@@ -422,9 +422,9 @@ cd ~/dotfiles
 </div>
 </div>
 </div>
-<div id="outline-container-orge404474" class="outline-3">
-<h3 id="orge404474">配置文件介绍</h3>
-<div class="outline-text-3" id="text-orge404474">
+<div id="outline-container-orgd5042bc" class="outline-3">
+<h3 id="orgd5042bc">配置文件介绍</h3>
+<div class="outline-text-3" id="text-orgd5042bc">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -469,9 +469,9 @@ cd ~/dotfiles
 </div>
 </div>
 
-<div id="outline-container-orgc226436" class="outline-3">
-<h3 id="orgc226436">文件引用顺序</h3>
-<div class="outline-text-3" id="text-orgc226436">
+<div id="outline-container-org3f18528" class="outline-3">
+<h3 id="org3f18528">文件引用顺序</h3>
+<div class="outline-text-3" id="text-org3f18528">
 <p>
 在我的配置下，zsh启动时依次会source:
 </p>

@@ -67,18 +67,18 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgda930db">Tag文件的作用</a></li>
-<li><a href="#org4ad7f40">Tag文件格式</a>
+<li><a href="#orgaf0b555">Tag文件的作用</a></li>
+<li><a href="#org4f3bda0">Tag文件格式</a>
 <ul>
-<li><a href="#orgd02a0ec">example</a></li>
-<li><a href="#org187414a">vim 支持的tag文件格式</a></li>
+<li><a href="#orgc0e7f83">example</a></li>
+<li><a href="#org5835254">vim 支持的tag文件格式</a></li>
 </ul>
 </li>
-<li><a href="#orge6d24ea">版本</a></li>
-<li><a href="#org40c3005">简单使用</a></li>
-<li><a href="#org445297f">定制自己的类型过滤器</a></li>
-<li><a href="#org78cd9f3">配合vim</a></li>
-<li><a href="#orga458db4">配合emacs</a></li>
+<li><a href="#orgac61adc">版本</a></li>
+<li><a href="#orga6e6b49">简单使用</a></li>
+<li><a href="#org6f6552a">定制自己的类型过滤器</a></li>
+<li><a href="#orgda066a7">配合vim</a></li>
+<li><a href="#org04ad669">配合emacs</a></li>
 </ul>
 </div>
 </div>
@@ -94,34 +94,34 @@ site: <a href="http://ctags.sourceforge.net/">Exuberant Ctags</a>
 不光可以过滤代码文件，普通的有格式的纯文本都可以用。
 </p>
 
-<div id="outline-container-orgda930db" class="outline-2">
-<h2 id="orgda930db">Tag文件的作用</h2>
-<div class="outline-text-2" id="text-orgda930db">
+<div id="outline-container-orgaf0b555" class="outline-2">
+<h2 id="orgaf0b555">Tag文件的作用</h2>
+<div class="outline-text-2" id="text-orgaf0b555">
 <p>
 一般用于编辑器的代码跳转和查找
 比如vim 和emacs
 </p>
 </div>
 </div>
-<div id="outline-container-org4ad7f40" class="outline-2">
-<h2 id="org4ad7f40">Tag文件格式</h2>
-<div class="outline-text-2" id="text-org4ad7f40">
+<div id="outline-container-org4f3bda0" class="outline-2">
+<h2 id="org4f3bda0">Tag文件格式</h2>
+<div class="outline-text-2" id="text-org4f3bda0">
 <p>
 ctags生成的tag格式:
 {tagname}&lt;Tab&gt;{tagfile}&lt;Tab&gt;{tagaddress}
 </p>
 </div>
-<div id="outline-container-orgd02a0ec" class="outline-3">
-<h3 id="orgd02a0ec">example</h3>
-<div class="outline-text-3" id="text-orgd02a0ec">
+<div id="outline-container-orgc0e7f83" class="outline-3">
+<h3 id="orgc0e7f83">example</h3>
+<div class="outline-text-3" id="text-orgc0e7f83">
 <p>
 AddTeamExp	<i>data/script/AddTeamExp.lua	/^newClass('AddTeamExp', BaseNode)$</i>;"
 </p>
 </div>
 </div>
-<div id="outline-container-org187414a" class="outline-3">
-<h3 id="org187414a">vim 支持的tag文件格式</h3>
-<div class="outline-text-3" id="text-org187414a">
+<div id="outline-container-org5835254" class="outline-3">
+<h3 id="org5835254">vim 支持的tag文件格式</h3>
+<div class="outline-text-3" id="text-org5835254">
 <p>
 vim支持的必须是下面三三种的一种
 </p>
@@ -133,20 +133,20 @@ vim支持的必须是下面三三种的一种
 </div>
 </div>
 </div>
-<div id="outline-container-orge6d24ea" class="outline-2">
-<h2 id="orge6d24ea">版本</h2>
-<div class="outline-text-2" id="text-orge6d24ea">
+<div id="outline-container-orgac61adc" class="outline-2">
+<h2 id="orgac61adc">版本</h2>
+<div class="outline-text-2" id="text-orgac61adc">
 <p>
 ctags，我们目前所指的是它的一个多语言实现 Exuberant Ctags，原生支持多达41中编程语言
 ctags还可以通过配置文件，增加语言扩展，定制自己的语言类型过滤器
 </p>
 </div>
 </div>
-<div id="outline-container-org40c3005" class="outline-2">
-<h2 id="org40c3005">简单使用</h2>
-<div class="outline-text-2" id="text-org40c3005">
+<div id="outline-container-orga6e6b49" class="outline-2">
+<h2 id="orga6e6b49">简单使用</h2>
+<div class="outline-text-2" id="text-orga6e6b49">
 <div class="org-src-container">
-<pre class="src src-sh">ctags -R .
+<pre class="src src-sh">ctags -R . 
 </pre>
 </div>
 <p>
@@ -154,9 +154,9 @@ ctags还可以通过配置文件，增加语言扩展，定制自己的语言类
 </p>
 </div>
 </div>
-<div id="outline-container-org445297f" class="outline-2">
-<h2 id="org445297f">定制自己的类型过滤器</h2>
-<div class="outline-text-2" id="text-org445297f">
+<div id="outline-container-org6f6552a" class="outline-2">
+<h2 id="org6f6552a">定制自己的类型过滤器</h2>
+<div class="outline-text-2" id="text-org6f6552a">
 <div class="org-src-container">
 <pre class="src src-shell">ctags -R . \
 		-f ./tags\
@@ -194,9 +194,9 @@ ctags还可以通过配置文件，增加语言扩展，定制自己的语言类
 </div>
 </div>
 </div>
-<div id="outline-container-org78cd9f3" class="outline-2">
-<h2 id="org78cd9f3">配合vim</h2>
-<div class="outline-text-2" id="text-org78cd9f3">
+<div id="outline-container-orgda066a7" class="outline-2">
+<h2 id="orgda066a7">配合vim</h2>
+<div class="outline-text-2" id="text-orgda066a7">
 <p>
 在~/.vimrc中加入
 set tags+=./tags
@@ -205,9 +205,9 @@ set tags+=./tags
 </p>
 </div>
 </div>
-<div id="outline-container-orga458db4" class="outline-2">
-<h2 id="orga458db4">配合emacs</h2>
-<div class="outline-text-2" id="text-orga458db4">
+<div id="outline-container-org04ad669" class="outline-2">
+<h2 id="org04ad669">配合emacs</h2>
+<div class="outline-text-2" id="text-org04ad669">
 <p>
 生成emacs能是别的tag文件，需要用到-E 选项
 </p>

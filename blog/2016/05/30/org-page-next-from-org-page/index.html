@@ -67,30 +67,30 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org06e3655">对原版org-page觉得不足之处</a>
+<li><a href="#org0bcd74c">对原版org-page觉得不足之处</a>
 <ul>
-<li><a href="#orge73b6a0">org-page 对图片的处理是分散的。</a></li>
-<li><a href="#orgbd63584">图片跨category 不好用</a></li>
-<li><a href="#org15344a3">wiki的uri默认是blog</a></li>
+<li><a href="#orge732510">org-page 对图片的处理是分散的。</a></li>
+<li><a href="#org59196e1">图片跨category 不好用</a></li>
+<li><a href="#orgb9b2fcd">wiki的uri默认是blog</a></li>
 </ul>
 </li>
-<li><a href="#org439fd34">我的修改</a>
+<li><a href="#org40765d1">我的修改</a>
 <ul>
-<li><a href="#org1e69550">图片集中管理</a></li>
-<li><a href="#orgbd0bf9a">交互式创建post 自动更正category uri</a></li>
-<li><a href="#orgf1a2dd5">fix op/git-last-change-date regex match error</a></li>
+<li><a href="#orgf2fa914">图片集中管理</a></li>
+<li><a href="#org1d1cfc2">交互式创建post 自动更正category uri</a></li>
+<li><a href="#org20ae238">fix op/git-last-change-date regex match error</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org06e3655" class="outline-2">
-<h2 id="org06e3655">对原版org-page觉得不足之处</h2>
-<div class="outline-text-2" id="text-org06e3655">
-</div><div id="outline-container-orge73b6a0" class="outline-3">
-<h3 id="orge73b6a0">org-page 对图片的处理是分散的。</h3>
-<div class="outline-text-3" id="text-orge73b6a0">
+<div id="outline-container-org0bcd74c" class="outline-2">
+<h2 id="org0bcd74c">对原版org-page觉得不足之处</h2>
+<div class="outline-text-2" id="text-org0bcd74c">
+</div><div id="outline-container-orge732510" class="outline-3">
+<h3 id="orge732510">org-page 对图片的处理是分散的。</h3>
+<div class="outline-text-3" id="text-orge732510">
 <p>
 假如有一张图片在多个org文件中使用，那么，就会在html-branch中存在多份拷贝
 比如:
@@ -117,9 +117,9 @@ assets/blog/2015/04/07/b/test.png
 </p>
 </div>
 </div>
-<div id="outline-container-orgbd63584" class="outline-3">
-<h3 id="orgbd63584">图片跨category 不好用</h3>
-<div class="outline-text-3" id="text-orgbd63584">
+<div id="outline-container-org59196e1" class="outline-3">
+<h3 id="org59196e1">图片跨category 不好用</h3>
+<div class="outline-text-3" id="text-org59196e1">
 <p>
 上面提到的test.png 在org branch 下，需要放到blog目录下才能正常导出
 </p>
@@ -133,20 +133,20 @@ assets/blog/2015/04/07/b/test.png
 </p>
 </div>
 </div>
-<div id="outline-container-org15344a3" class="outline-3">
-<h3 id="org15344a3">wiki的uri默认是blog</h3>
+<div id="outline-container-orgb9b2fcd" class="outline-3">
+<h3 id="orgb9b2fcd">wiki的uri默认是blog</h3>
 </div>
 </div>
-<div id="outline-container-org439fd34" class="outline-2">
-<h2 id="org439fd34">我的修改</h2>
-<div class="outline-text-2" id="text-org439fd34">
+<div id="outline-container-org40765d1" class="outline-2">
+<h2 id="org40765d1">我的修改</h2>
+<div class="outline-text-2" id="text-org40765d1">
 <p>
 <a href="https://github.com/dingmingxin/org-page">dingmingxin/org-page</a>
 </p>
 </div>
-<div id="outline-container-org1e69550" class="outline-3">
-<h3 id="org1e69550">图片集中管理</h3>
-<div class="outline-text-3" id="text-org1e69550">
+<div id="outline-container-orgf2fa914" class="outline-3">
+<h3 id="orgf2fa914">图片集中管理</h3>
+<div class="outline-text-3" id="text-orgf2fa914">
 <p>
 图片都放在org branch op/site-assets-dir 目录下: <a href="https://github.com/dingmingxin/org-page/commit/6dd7ea3e0075f371de735a5f3fc7d91c06f09b2e">6dd7ea3</a>
 </p>
@@ -164,17 +164,17 @@ op/site-assets-dir 默认值是"assets"
 </p>
 </div>
 </div>
-<div id="outline-container-orgbd0bf9a" class="outline-3">
-<h3 id="orgbd0bf9a">交互式创建post 自动更正category uri</h3>
-<div class="outline-text-3" id="text-orgbd0bf9a">
+<div id="outline-container-org1d1cfc2" class="outline-3">
+<h3 id="org1d1cfc2">交互式创建post 自动更正category uri</h3>
+<div class="outline-text-3" id="text-org1d1cfc2">
 <p>
 根据post的category 自动将uri中的目录修正: <a href="https://github.com/dingmingxin/org-page/commit/761fb4e3d7206a7c2f72c1bcf4884bb71624feba">761fb4e</a>
 </p>
 </div>
 </div>
-<div id="outline-container-orgf1a2dd5" class="outline-3">
-<h3 id="orgf1a2dd5">fix op/git-last-change-date regex match error</h3>
-<div class="outline-text-3" id="text-orgf1a2dd5">
+<div id="outline-container-org20ae238" class="outline-3">
+<h3 id="org20ae238">fix op/git-last-change-date regex match error</h3>
+<div class="outline-text-3" id="text-org20ae238">
 <p>
 <a href="https://github.com/dingmingxin/org-page/commit/a7b28a1886f150baccda1a334df929afff68c488">a7b28a1</a>
 </p>
