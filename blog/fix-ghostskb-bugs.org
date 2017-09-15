@@ -4,7 +4,7 @@
 #+DATE:        2017-09-03 日
 #+URI:         /blog/%y/%m/%d/解决ghostskb的一些bug
 #+KEYWORDS:    GhostSKB
-#+TAGS:        GhostSKB
+#+TAGS:        Mac,GhostSKB
 #+LANGUAGE:    en
 #+OPTIONS:     H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+DESCRIPTION: GhostSKB
